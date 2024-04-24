@@ -1,3 +1,9 @@
+
+.recetasActu{
+    display: flex;
+    justify-content: space-between;
+}
+
 /* Home.css */
 
 .Home-video {
@@ -28,3 +34,4 @@
     background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para el texto */
   }
   
+
