@@ -1,2 +1,87 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+/*@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');*/
 
+.container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.imagen_signUp {
+    background-image: url('https://media.discordapp.net/attachments/1230946326078947429/1233356054084194334/pexels-klaus-nielsen-6294246.jpg?ex=662ccbd5&is=662b7a55&hm=9be6e3c5628d55988281db2fba0d6dceb1e535c2b6aedf66ae3092de2eb06322&=&format=webp&width=364&height=546');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.form_SignUp{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:10px;
+    align-items: center;
+    margin: 25% 20%;
+}
+.form_SignUp ::placeholder{
+    color: #6161615c;
+}
+
+.input_SignUp{
+    left: 0;
+    line-height: normal;
+    white-space: nowrap;
+    font-weight: 700;
+    width: 100%;
+    padding: 5px;
+    color:rgba(0, 0, 0, 0.283);
+    border: none;
+    border-bottom: 2px solid #00000037;
+}
+.labels_SignUp{
+    display: flex;
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-weight: 540;
+    left: 0;
+    color:rgba(0, 0, 0, 0.655) ;
+   
+}
+.SignUp_Button{
+    background-color: #fcc948;
+    border-radius: 50px;
+    padding: 10px 23px;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+.agree{
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.check{
+    background-color:#fcc948;
+    box-shadow: 0px 2px 2px #00000032;
+    left: 0;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+.label_checkbox{
+    font-size:600;
+    color:rgba(0, 0, 0, 0.268) ;
+}
+.Login_Button{
+    background-color: #fcc948;
+    border-radius: 50px;
+    padding: 10px 23px;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+.moverBoton{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}

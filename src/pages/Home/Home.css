@@ -77,12 +77,6 @@ Home.css
   justify-content: center;
 }
 
-.container {
-  display: flex;
-  justify-content: center; 
-  align-items: center;  Centra el texto dentro de las cajas 
-
-}
 
 .container2{
   width: 100%;
@@ -105,20 +99,7 @@ Home.css
 
 }
 
-.content{
-    position: relative;
-    width: 100vw;
-    height: 100vh; Establece la altura deseada para el contenedor de video 
-    overflow: hidden;  Oculta cualquier parte del video que se salga del contenedor 
-  }
-  
-  .video-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
+
   .text-overlay {
     position: absolute;
     z-index: 1;
