@@ -1,0 +1,42 @@
+.grid_recetas{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: 5% 4%;
+    gap: 20px;
+}
+.titulo_recetas{
+    text-align: center;
+    margin-top: 30px;
+}
+.label_Recetas{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.recetas_Desayunos{
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(156, 212, 44, 0.551);
+    border-radius:20px;
+    
+}
+.recetas_almuerzos{
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(220, 113, 26, 0.643);
+    border-radius:20px;
+    
+}
+.recetas_cena{
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(49, 59, 172, 0.692);
+    border-radius:20px;
+    
+}

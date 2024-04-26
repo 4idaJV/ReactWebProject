@@ -1,52 +1,50 @@
 import { useState } from 'react'
+import {signUp} from '../../services/signUp.js'
 import './SignUp.css'
+import { useNavigate } from 'react-router-dom';
 
 
-
-const SignForm = (props) => {
+const SignForm = () => {
     const [fullName, setFullName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [isChecked, setIsChecked] = useState(false)
-    /* const [country, setCountry] = useState('') */
     const [confirmPassword, setConfirmPassword] = useState('')
-    /* const [gender, setGender] = useState('')
-    const [birthday, setBirthday] = useState(''); */
-    
-    const handleSubmit = (e) => {
+    const [isChecked, setIsChecked] = useState(false)
+    const history = useNavigate();
+
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if(isFormValid()) {
-            alert('You are IN!')
+            console.log('s')
+            const usuario = {name:fullName,email:email,password:password}
+            const añadirUsuario = await signUp(usuario)
+            const {token,messae,username} = añadirUsuario 
+                if(messae == 'User already exits'){ 
+                    alert(añadirUsuario.messae)
+                } else {
+                    localStorage.setItem("token", token)
+                    localStorage.setItem("nombre", username)  
+                    console.log(username,token,messae)
+                    alert('You are IN!')
+                    history('/');
+
+            }     
+        } else {
+        alert('Rellena los campos de manera correcta')
         }
+                  
     }
 
     const isFormValid = () => {
-        return validateEmail() && validatePassword() && validateConfirmPassword() /* && validateAge()  */&& isChecked /* && country */ !== '';
+        return validateEmail() && 
+        validatePassword() && validateConfirmPassword() &&
+         isChecked  !== '' &&
+         stylefullNameLength();
     }
-
-    /* const validateAge = () => {
-        const today = new Date();
-        const birthDate = new Date(birthday);
-        const age = today.getFullYear() - birthDate.getFullYear();
-        if (age < 18){
-            return alert('You must be 18 years old to register')
-        }else{
-            return age >= 18;
-        }
-    }; */
-    
-    /* const styleBirthday = () => {
-        if (birthday === '') {
-            return '';
-        } else {
-            return validateAge() ? 'valid' : 'invalid';
-        }
-    };
- */
     const validateConfirmPassword = () => {
         return confirmPassword === password;
     }
-
     const styleConfirmPassword = () => {
         if (confirmPassword === '') {
             return '';
@@ -54,25 +52,26 @@ const SignForm = (props) => {
             return validateConfirmPassword() ? 'valid' : 'invalid';
         }
     }
-
-    
+ 
     function checkboxClicked(event) {
         setIsChecked(event.target.checked)
-    }
-    
+    }  
+
     const validateEmail = () => {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+        return /[a-z0-9]@gmail.com$/.test(email);
     }
     
     const validatePassword = () => {
         return password.length > 5
     }
     
-    
     const stylefullName = () => {
         if (fullName === '') {
             return ''
         }
+    }
+    const stylefullNameLength = () => {
+        return fullName.length > 3
     }
         
     const styleEmail = () => {
@@ -91,11 +90,11 @@ const SignForm = (props) => {
         }
     }
     
-    
+
     return (
         <div className='container' id="container">
             <div className='form-container sign-up-container'></div>
-        <form action='#'>
+        <form onSubmit={handleSubmit}>
             <h1>Sign Up</h1>
                 <input type="text" placeholder= "Full Name" className={stylefullName()} value={fullName} onChange={(e) => setFullName(e.target.value)} />
                 <br/>
@@ -105,37 +104,6 @@ const SignForm = (props) => {
                 <br/>
                 <input type="password" placeholder="Confirm Password" className={styleConfirmPassword()} value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
         
-            {/* <label>
-                Country:
-                <select value={country} onChange={(e) => setCountry(e.target.value)}>
-                <option value="">Select Country</option>
-                {countries.map(country => (
-                    <option key={country.code} value={country.name}>{country.name}</option>
-                    ))}
-                </select> 
-            </label>
-            <br />
-            Gender:
-            <br />
-            <label>
-                Male
-                <input type="radio" name="gender" value="small" onChange={(event) => setGender(e.target.value)} />
-            </label>
-            <label>
-                Female
-                <input type="radio" name="gender" value="small" onChange={(event) => setGender(e.target.value)} />
-            </label>
-            <label>
-                Undisclosed
-                <input type="radio" name="gender" value="small" onChange={(event) => setGender(e.target.value)} />
-            </label>
-            <br />
-            <label>
-                Date of Birth:
-                <input  type="date" className={styleBirthday()} value={birthday} onChange={(e) => setBirthday(e.target.value)}/>
-
-            </label>
-            <br /> */}
             <br/>
             <label>
                 Agree to terms and conditions
@@ -155,10 +123,4 @@ const SignForm = (props) => {
 export default SignForm
 
 
-/* export const SignUp = () => {
-  return (
-
-    <div>SignUp</div>
-  )
-} */
 

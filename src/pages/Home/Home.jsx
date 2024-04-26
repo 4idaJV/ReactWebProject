@@ -1,7 +1,7 @@
 
 import './Home.css'
 import Filtrado from '../../components/Filtrado/Filtrado.jsx'
-import {getTodos} from '../../services/auth.js'
+import {getTodos} from '../../services/recetas.js'
 import {useState,useEffect} from 'react'
 
 
@@ -32,6 +32,7 @@ const Home = () => {
       <div className="text-overlay">
         <p>Comienza la creación de tus propias recetas</p>
       </div>
+
       <div className="text-overlay">
         <p>Comienza la creación de tus propias recetas</p>
       </div>
@@ -88,7 +89,6 @@ const Home = () => {
          <Filtrado  recetas={recetas}/>
       </div>
     </div>
-
   </section>
   );
 
