@@ -20,7 +20,6 @@ const SignForm = () => {
             const usuario = {name:fullName,email:email,password:password}
             const añadirUsuario = await signUp(usuario)
             const {token,messae,username} = añadirUsuario 
-                console.log(añadirUsuario)
                 if(messae == 'User already exits'){ 
                     alert(añadirUsuario.messae)
                 } else {

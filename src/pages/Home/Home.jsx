@@ -33,7 +33,6 @@ const Home = () => {
       <div className='recetasActu'>
          <Filtrado  recetas={recetas}/>
       </div>
-    
   </section>
   );
 
