@@ -7,6 +7,104 @@
 /* Home.css */
 
 .Home-video {
+
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Cambia la altura a 100vh para ocupar el 100% del viewport */
+  overflow: auto; /* Añade desplazamiento vertical cuando sea necesario */
+}
+
+.video-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-container::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background-color: black;
+  opacity: .3;
+  z-index: 1;
+  top: 0;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-size: 4rem;
+  z-index: 2;
+}
+.titulo1 {
+  color: rgb(252, 201, 72);
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  font-size: 500%;
+}
+
+.caja {
+  width: 350px; /* Ancho fijo para las cajas */
+  height: auto; /* Altura automática */
+  margin: 6%; /* Espacio entre las cajas */
+}
+
+.caja img {
+  max-width: 140%; /* Ajusta el tamaño máximo de la imagen al 100% del ancho de la caja */
+}
+
+
+.positioncaja {
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  text-align: center; /* Centra el texto dentro de las cajas */
+
+}
+
+.container2{
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+
+.caja2 {
+  color:  #000000;
+  font-size: 4rem;
+  height: 20%;
+  width: 30%;  
+  background-color: rgb(128, 128, 128);
+
+}
+
+.subtitulo2 {
+  color:  #1c1fd1;
+  contain: content;
+
+}
+=======
     position: relative;
     width: 100vw;
     height: 60vh; /* Establece la altura deseada para el contenedor de video */
