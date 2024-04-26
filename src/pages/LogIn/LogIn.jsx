@@ -2,6 +2,8 @@ import './LogIn.css'
 import {useState} from 'react'
 import { logIn } from '../../services/logIn.js'
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 const Logear = () => {
     const [email, setEmail] = useState('')
@@ -40,6 +42,7 @@ const Logear = () => {
             <button type="submit">
                 SIGN UP
             </button>
+            <Link to='/SignUp'><button type='button'>SignUp</button></Link>
        
         </form>
     </div>

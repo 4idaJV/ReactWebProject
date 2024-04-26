@@ -84,9 +84,9 @@ const Home = () => {
           your lifestyle.
         </p>
       </div>
-      <div className='recetasActu'>
+      {/* <div className='recetasActu'>
          <Filtrado  recetas={recetas}/>
-      </div>
+      </div> */}
     </div>
   </section>
   );

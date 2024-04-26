@@ -29,15 +29,15 @@ const Header = () => {
 
   return (
     <div className="header">
-      <div className="logo">
+      <Link to='/'> <div className="logo">
         <img src={foto} alt="Log" />
-      </div>
+      </div></Link>
       <nav className="navigation">
-        <button className="boton">CREATE MENU</button>
+        <button className="boton" onClick={handleClick}>CREATE MENU</button>
         <ul className="nav-list">
 
           <li>
-            <a href="#">RECIPIES</a>
+          <Link to='/recetas'><a href="#">RECIPIES</a></Link>
           </li>
           <li>
             <a href="#">ABOUT</a>
@@ -47,13 +47,10 @@ const Header = () => {
           </li>
 
         </ul>
-        <button className="login">
+        <Link to='/login'><button className ="login">
           <img src={foto2} alt="Log" />
-        </button>
+        </button></Link>
       </nav>
-      <button type='button'  onClick={handleClick}>Crear Menu</button>
-      <Link to='/login'><button type='button'>Log In</button></Link>
-      <Link to='/SignUp'><button type='button'>SignUp</button></Link>
 
     </div>
   );
