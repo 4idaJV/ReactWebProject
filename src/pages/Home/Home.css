@@ -77,13 +77,6 @@
   justify-content: center;
 }
 
-.container {
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  text-align: center; /* Centra el texto dentro de las cajas */
-
-}
 
 .container2{
   width: 100%;
@@ -105,13 +98,7 @@
   contain: content;
 
 }
-=======
-    position: relative;
-    width: 100vw;
-    height: 60vh; /* Establece la altura deseada para el contenedor de video */
-    overflow: hidden; /* Oculta cualquier parte del video que se salga del contenedor */
-  }
-  
+
   .video {
     width: 100%;
     height: auto; /* Restaura la altura automática del video */
