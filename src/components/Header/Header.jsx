@@ -1,6 +1,6 @@
 
-// Header.jsx
-import './Header.css';
+/* // Header.jsx
+import './Header1.css';
 import { useNavigate } from 'react-router-dom';
 import {useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
@@ -28,7 +28,7 @@ const Header = () => {
 
 
   return (
-    <div className="header">
+    <div className="header1">
       <Link to='/'> <div className="logo">
         <img src={foto} alt="Log" />
       </div></Link>
@@ -37,7 +37,7 @@ const Header = () => {
         <ul className="nav-list">
 
           <li>
-          <Link to='/recetas'><a href="#">RECIPIES</a></Link>
+          <Link to='/'><a href="#">RECIPIES</a></Link>
           </li>
           <li>
             <a href="#">ABOUT</a>
@@ -57,3 +57,4 @@ const Header = () => {
 };
 
 export default Header;
+ */

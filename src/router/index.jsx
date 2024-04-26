@@ -1,5 +1,5 @@
 import { createBrowserRouter,redirect} from 'react-router-dom'
-import Home from '../pages/Home/Home'
+import Home from '../pages/Home/Home1.jsx'
 import About from '../pages/About/About.jsx'
 import Root from '../layouts/mainLayout.jsx'
 import SignForm from '../pages/SignUp/SignUp.jsx'

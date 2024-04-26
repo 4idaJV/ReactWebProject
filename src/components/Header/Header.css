@@ -1,10 +1,12 @@
-.header {
+/* .header {
     background-color: rgb(252, 201, 72);
     color: #333; 
+    box-shadow: 0px 4px 4px #00000040;
     padding: 0; 
     position: fixed; 
     top: 0; 
-    width: 100%; 
+    width: 100%;
+    height: 10%; 
     z-index: 1000; 
     border-top: none; 
     display: flex;  
@@ -24,9 +26,9 @@
 
 .nav-list li {
     margin-left: 50px; 
-}
+} */
 
-.nav-list li:first-child {
+/* .nav-list li:first-child {
     margin-left: 0; 
 }
 
@@ -35,7 +37,7 @@
     color: #ffffff; 
     font-family: 'Roboto', sans-serif;
     font-weight: bold; 
-    font-size: 25px;
+    font-size: 18px;
 }
 
 .nav-list li a:hover {
@@ -43,7 +45,7 @@
 }
 
 .logo img {
-    width: 150px; 
+    width: 95px; 
     margin-left: 50px;
 }
 
@@ -57,43 +59,43 @@
     color: #ffffff; 
     font-family: 'Roboto', sans-serif;
     font-weight: bold; 
-    font-size: 20px; 
+    font-size: 18px; 
     border: none; 
     white-space: nowrap;
     position: absolute; 
-    top: 43px; 
-    right: 60px;
+    top: 25px; 
+    right: 15px;
     cursor: pointer;
-}
-.boton:hover {
-    background-color: #d64d23; /* Cambio de color al pasar el ratón */
+} */
+/* .boton:hover {
+    background-color: #d64d23;  Cambio de color al pasar el ratón 
 }
 
 .boton:active {
-    background-color: #c8370c; /* Cambio de color al hacer clic */
-}
+    background-color: #c8370c;  Cambio de color al hacer clic 
+} */
 
-.login {
+/* .login {
     background-color: transparent;
     border: none; 
     padding: 0;
     position: absolute;
-    top: 40px; 
-    right: 50px; 
+    top: 30%; 
+    right: -28%; 
 }
 
 .login img {
-    width: 50px; 
+    width: 30px; 
     height: auto;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
     cursor: pointer;
-}
+} */
 
-.login:hover {
-    filter: drop-shadow(0px 4px 10px rgba(116, 27, 0, 0.3)); /* Cambio de sombra al pasar el ratón */
+/*.login:hover {
+    filter: drop-shadow(0px 4px 10px rgba(116, 27, 0, 0.3));  Cambio de sombra al pasar el ratón 
 }
 
 .login:active {
-    filter: drop-shadow(0px 4px 4px rgba(78, 19, 1, 0.3)); /* Cambio de sombra al hacer clic */
+    filter: drop-shadow(0px 4px 4px rgba(78, 19, 1, 0.3));  Cambio de sombra al hacer clic 
 }
-
+*/

@@ -1,4 +1,4 @@
-
+/* 
 import './Home.css'
 import Filtrado from '../../components/Filtrado/Filtrado.jsx'
 import {getTodos} from '../../services/recetas.js'
@@ -21,20 +21,19 @@ const Home = () => {
 
    <section>
     <div className="Home-video">
-      <div className="video-container">
-        <video autoPlay loop muted className="video">
-          <source
-            src="https://videos.pexels.com/video-files/1841002/1841002-uhd_4096_2160_24fps.mp4"
-            type="video/mp4"
-          />
-        </video>
-      </div>
-      <div className="text-overlay">
-        <p>Comienza la creación de tus propias recetas</p>
-      </div>
-      <div className="text-overlay">
-        <p>Comienza la creación de tus propias recetas</p>
-      </div>
+    <div className="video-container">
+  <div className="text-overlay">
+    <p>Comienza la creación de tus propias recetas</p>
+  </div>
+  <video autoPlay loop muted className="video">
+    <source
+      src="https://videos.pexels.com/video-files/1841002/1841002-uhd_4096_2160_24fps.mp4"
+      type="video/mp4"
+    />
+  </video>
+</div>
+
+
       <h1 className="titulo1">How It Works</h1>
 
       <div className="container">
@@ -86,7 +85,7 @@ const Home = () => {
       </div>
       {/* <div className='recetasActu'>
          <Filtrado  recetas={recetas}/>
-      </div> */}
+      </div> }
     </div>
   </section>
   );
@@ -94,4 +93,4 @@ const Home = () => {
 }
 
 
-export default Home;
+export default Home; */
