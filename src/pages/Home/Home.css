@@ -2,6 +2,7 @@
 .recetasActu{
     display: flex;
     justify-content: space-between;
+    gap:10px;
 }
 
 /* Home.css */

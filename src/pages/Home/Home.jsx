@@ -88,7 +88,6 @@ const Home = () => {
          <Filtrado  recetas={recetas}/>
       </div>
     </div>
-
   </section>
   );
 
