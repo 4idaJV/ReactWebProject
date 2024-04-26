@@ -48,10 +48,12 @@ function CrearTablas() {
 
     return (
       <>
-        <button type='button' onClick={handleclick1}>Crear Menu de 1 dia</button>
-        {handleClick()}
+      <section className='crearmenu'>
+        <button type='button'  onClick={handleclick1}>Crear Menu de 1 dia</button>
+        {handleClick()} 
+        </section>
       </>
-      
+     
     )
  
   
