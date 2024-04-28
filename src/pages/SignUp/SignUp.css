@@ -7,7 +7,7 @@
     grid-template-columns: 50% 50%;
 }
 .imagen_signUp {
-    background-image: url('https://media.discordapp.net/attachments/1230946326078947429/1233356054084194334/pexels-klaus-nielsen-6294246.jpg?ex=662ccbd5&is=662b7a55&hm=9be6e3c5628d55988281db2fba0d6dceb1e535c2b6aedf66ae3092de2eb06322&=&format=webp&width=364&height=546');
+    background-image: url('../../../public/imagenes/pexels-klaus-nielsen-6294246.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
