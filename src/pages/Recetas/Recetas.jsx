@@ -14,7 +14,7 @@ const Recetas = () => {
     const data = await getTodos()
     SetRecetas(data)
   }
-  console.log(comida)
+  console.log(recetas)
   return (
     <section className='crearmenu' >
     <h1 className='titulo_recetas'>Nuestras Recetas</h1>
@@ -37,7 +37,7 @@ const Recetas = () => {
 }
 
 function mostrarRecetas(recetas,comida){
-    console.log()
+   
     if(recetas.length == 0){
         return <h1>Loading...</h1>
     } else if(recetas.length != 0 && comida == "desayuno") {
@@ -46,12 +46,12 @@ function mostrarRecetas(recetas,comida){
                 {recetas.filter((receta) => {
             return receta.menuSetTime == "desayuno"})
             .map((receta) => { 
-                console.log('a')
             return(
                 <div className='recetas_Desayunos' key={receta.id}>
                     <h2>{receta.title}</h2>
                     <p>Tiempo de Elaboracion: {receta.cookingTime} </p>
                     <img className='imagen_recetas' src={receta.img_url} alt="" />
+                    <p>ingredientes {receta.cookingTime} </p>
                 </div>
             );
         })}
@@ -97,9 +97,12 @@ function mostrarRecetas(recetas,comida){
                 {recetas.map((receta) => {
                     return(
                         <div className='recetas' key={receta.id}>
-                            <h2>{receta.title}</h2>
+                            <h2>{receta.title}</h2>asta
                             <p>Tiempo de Elaboracion: {receta.cookingTime} </p>
                             <img className='imagen_recetas' src={receta.img_url} alt="" />
+                            <p>ingredientes {receta.ingredients.map((ingredientes,i)=> {
+                                return <p key={i}>{ingredientes.name}</p>
+                            })} </p>
                         </div>
                     );
                 })}

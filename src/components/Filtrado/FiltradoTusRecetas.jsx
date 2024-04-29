@@ -1,7 +1,7 @@
 import './Filtrado.css'
 
 function FiltradoTusRecetas({crearRecetas}) {
-     console.log(crearRecetas.length)
+     console.log(crearRecetas)
 
   function mapTusRecetas(){
     if(crearRecetas.length == 0){
@@ -18,7 +18,9 @@ function FiltradoTusRecetas({crearRecetas}) {
                   <div className='recetas' key={receta.id}>
                       <h2>{receta.title}</h2>
                       <p>Tiempo de Elaboracion: {receta.cookingTime} </p>
-                      <img className='imagen_recetas' src={receta.img_url} alt="" />
+                      <img src={receta.img_url} className='imagen_recetas'  alt="" />
+                      <p>Alérgenos:{receta.alergenos}</p>
+                      <p>Régimen:{receta.regimen}</p>
                   </div>
               );
           })} 

@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react";
 
-const FiltradoCena = ({recetas}) => {
+const FiltradoCena = ({recetas,regimenMenu,alergenosMenu,actu,setActu}) => {
     const [breakf,SetBreakf] = useState([])
     const [bollean,SetBollean] = useState(false)
     const [numero,SetNumero] = useState(0)
@@ -14,29 +14,43 @@ const FiltradoCena = ({recetas}) => {
         //Con esto filtramos los desayunos de todas las recetas
         const desayunos = recetas.filter((breakfast)=> {
             return breakfast.menuSetTime == "cena"
+        }).filter((regimen)=>{
+            return regimen.regimen == regimenMenu && regimen.alergenos != alergenosMenu
         })
         SetBreakf(desayunos)
         //numero aleatorio
         const random = Math.floor(  Math.random() * desayunos.length)
         SetNumero(random)
+        setActu(false)
           return () => clearTimeout(timeoutId);  
-    },[bollean])
+    },[actu])
 
     function comprobar(){
         if(bollean == false){
             return (
                 <div>Esperando..</div>
             )
-        } else if(bollean == true) {
-            return (
-                <div className="desayuno">
-                     <h1 className='tituloComidas'>Cena</h1>
-                  <p>{breakf[numero].title}</p>
-                  <p>Porciones:{breakf[numero].servingSize}</p>
-                  <p>Instruciones :{breakf[numero].instructions}</p>
-                  <img src={breakf[numero].img_url} alt="" />
-                </div>
+        } else if(breakf[numero] == undefined) {
+            console.log("hola")
+            return(
+                <>
+                <p>No tenemos una receta que cumpla estos requisitos</p>
+                </>
             )
+            
+        }else{
+            return (
+                 <div className="desayuno">
+                     <h1 className='tituloComidas'> Cena</h1>
+                   <p>{breakf[numero].title}</p>
+                  <p>Porciones:{breakf[numero].servingSize}</p>
+                   <p>Instruciones :{breakf[numero].instructions}</p>
+                  <img src={breakf[numero].img_url} alt="" />
+                  <p>{breakf[numero].ingredients.map((ingredientes,i)=> {
+                        return <h3 key={i}>{ingredientes.name}</h3> 
+                    })}</p>
+                 </div>
+            )    
         }
     }
 

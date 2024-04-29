@@ -7,7 +7,10 @@ import FiltradoCena from '../../components/Filtrado/FiltradoCena.jsx'
 
 function CrearTablas() {
   const [recetas,SetRecetas] = useState([]);
-  const [boolean,SetBollean] = useState(false)
+  const [boolean,SetBollean] = useState(false);
+  const [actu,setActu] = useState(false)
+  const [alergenosMenu,SetAlergenosMenu] = useState("");
+  const [regimenMenu,SetRegimenMenu] = useState("");
 
   useEffect(() => {
     TodasRecetas()
@@ -20,6 +23,7 @@ function CrearTablas() {
 
   function handleclick1(e){
     SetBollean(true)
+    setActu(true)
   }
 
   function handleClick(){
@@ -27,13 +31,13 @@ function CrearTablas() {
         return(
           <div>
             <div>
-              <FiltradoDesayuno recetas={recetas}/>
+              <FiltradoDesayuno recetas={recetas} regimenMenu={regimenMenu} alergenosMenu={alergenosMenu} actu={actu} setActu={setActu} />
             </div>
             <div>
-              <FiltradoAlmuerzo recetas={recetas}/>
+              <FiltradoAlmuerzo recetas={recetas} regimenMenu={regimenMenu} alergenosMenu={alergenosMenu} actu={actu}  setActu={setActu}/>
             </div>
             <div>
-              <FiltradoCena recetas={recetas}/>
+              <FiltradoCena recetas={recetas} regimenMenu={regimenMenu}  alergenosMenu={alergenosMenu} actu={actu}  setActu={setActu}/>
             </div>
           </div>
           )
@@ -49,9 +53,33 @@ function CrearTablas() {
     return (
       <>
       <section className='crearmenu'>
-        <button type='button'  onClick={handleclick1}>Crear Menu de 1 dia</button>
-        {handleClick()} 
+
+        <div>
+          <button type='button'  onClick={handleclick1}>Crear Menu de 1 dia</button>
+        </div>
+        
+        
+
+        <label className='labels_SignUp'>Alérgenos
+        <select value={alergenosMenu} onChange={(e) => SetAlergenosMenu(e.target.value)}>
+                <option value="1"></option>
+                <option value="lacteos">Lácteos</option>
+                <option value="gluten">Gluten</option>
+                <option value="huevo">Huevo</option>
+                <option value="frutoSecos">frutoSecos</option>
+        </select></label> 
+
+        <label className='labels_SignUp'>Régimen
+        <select value={regimenMenu} onChange={(e) => SetRegimenMenu(e.target.value)}>
+                <option value="1"></option>
+                <option value="vegetariano">Vegetariano</option>
+                <option value="vegano">Vegano</option>
+                <option value="Omnivoro">Omnívoro</option>
+        </select></label> 
+    
         </section>
+
+        {handleClick()}
       </>
      
     )
