@@ -34,7 +34,7 @@ const Home = () => {
       <section className='section2'>
         <h1 className="titulo1">How It Works</h1>
 
-        <div className="container">
+        <div className="containerwork">
           <div className="caja">
             <img
               src="https://img.freepik.com/free-vector/eating-variety-foods-concept-illustration_114360-11295.jpg"
@@ -73,20 +73,55 @@ const Home = () => {
 
       </section>
       <section className="section3">
-      <div className="sazzon-content">
-        <h1>A spoonful of <span className="sazzon-highlight">Sazzón.</span></h1>
-        <p>We know how important it is for you to enjoy nutritious meals without sacrificing time or quality, which is why we've created this practical and versatile menu.</p>
-        <p>In just a few minutes, you'll find a carefully curated selection of delicious and healthy options that perfectly fit your lifestyle.</p>
-      </div>
-      <div className="sazzon-image">
-        {/* Image would go here, use the correct path to your image */}
-        <img src="path-to-your-apple-image.jpg" alt="Apple" />
-      </div>
+        <div className="sazzon-content">
+          <h1 className='spoonfullTitle'>A spoonful of <span className="sazzon-highlight">Sazzón.</span></h1>
+          <p className='spoonfullParagraph'>We know how important it is for you to enjoy nutritious meals without sacrificing time or quality, which is why we've created this practical and versatile menu.</p>
+          <br></br>
+          <p className='spoonfullParagraph'>In just a few minutes, you'll find a carefully curated selection of delicious and healthy options that perfectly fit your lifestyle.</p>
+        </div>
+        <div className="sazzon-image">
+          {/*Image would go here*/}
+          <img src="" alt="" />
+        </div>
+      </section>
+
+      <section className="section4">
+        <div className="recipe-image">
+          {/*Image would go here*/}
+          <img src="" alt="" />
+        </div>
+        <div className="recipe-content">
+          <h1 className='recipeTitle'>Endless culinary possibilities.</h1>
+          <p className='recipeParagraph'>Discover a world of culinary options with our extensive collection of <span className='standout200recipies'>over 2000 recipes</span>. </p>
+          <br></br>
+          <p className='recipeParagraph'>Our variety offers you the freedom to explore and experiment in the kitchen. We're here to inspire and help you achieve your goals.</p>
+        </div>
+
+      </section>
+
+      <section className="section5">
+        <h1 className='newRecipiesTitle'>RECENT RECIPIES</h1>
+        <div className="cajaRectangular">
+          <div className='eachRecipeBox'>
+            hola
+          </div>
+          <div className='eachRecipeBox'>
+            hola
+          </div>
+          <div className='eachRecipeBox'>
+            hola
+          </div>
+          <div className='eachRecipeBox'>
+            hola
+          </div>
+        </div>
+
 
       </section>
     </>
   );
-
 }
+
+
 
 export default Home;

@@ -1,12 +1,12 @@
 /* Footer.css */
 
 .footer{
-    background: linear-gradient(to right, #FAD961, #FFD06D, #FFB88C); /* Degradado de colores */
-    color: #333; /* Color de texto */
+    background-color: #272727; ;
+    color: white; /* Color de texto */
     text-align: center; /* Alineación del texto al centro */
     padding: 50px 20px; /* Espaciado interno */
     position: relative; /* Relativo para el posicionamiento del contenido */
     width: 100vw; /* Ancho completo de la pantalla */
-    
+    height: 70vh;
   }
   
