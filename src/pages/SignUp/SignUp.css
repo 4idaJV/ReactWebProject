@@ -7,7 +7,7 @@
     grid-template-columns: 50% 50%;
 }
 .imagen_signUp {
-    background-image: url('../../../public/imagenes/pexels-klaus-nielsen-6294246.jpg');
+    background-image: url('../../../public/imagenes/sigIn.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -55,6 +55,7 @@
     font-weight: 600;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
+    cursor: pointer;
 }
 .agree{
     width: 100%;
@@ -79,6 +80,7 @@
     font-weight: 600;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
+    cursor: pointer;
 }
 .moverBoton{
     display: flex;

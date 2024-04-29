@@ -10,7 +10,7 @@ const Root = () => {
     
         <Outlet className='content'/>
     
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

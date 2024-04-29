@@ -16,7 +16,7 @@ const Recetas = () => {
   }
   console.log(comida)
   return (
-    <>
+    <section className='crearmenu' >
     <h1 className='titulo_recetas'>Nuestras Recetas</h1>
     <div className='label_Recetas'>
         <label> 
@@ -32,7 +32,7 @@ const Recetas = () => {
     <div className='grid_recetas'>
       {mostrarRecetas(recetas,comida)}
     </div>
-    </>
+    </section>
   )
 }
 

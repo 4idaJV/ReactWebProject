@@ -30,6 +30,7 @@ const FiltradoDesayuno = ({recetas}) => {
         } else if(bollean == true) {
             return (
                 <div className="desayuno">
+                    <h1 className='tituloComidas'>Desayuno</h1>
                   <p>{breakf[numero].title}</p>
                   <p>Porciones:{breakf[numero].servingSize}</p>
                   <p>Instruciones :{breakf[numero].instructions}</p>
@@ -38,7 +39,7 @@ const FiltradoDesayuno = ({recetas}) => {
             )
         }
     }
-
+    console.log(breakf)
     return(
         <>
         {comprobar()}

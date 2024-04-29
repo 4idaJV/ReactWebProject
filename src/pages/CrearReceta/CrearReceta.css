@@ -1,0 +1,15 @@
+.CrearReceta{
+    margin-top: 8vh;
+}
+.FormularioRecetas{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:10px;
+    align-items: center;
+    margin: 5% 10%;
+}
+.titulo_CrearReceta{
+    margin-top: 2rem;
+    text-align: center;
+}
