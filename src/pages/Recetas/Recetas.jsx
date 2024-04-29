@@ -14,7 +14,7 @@ const Recetas = () => {
     const data = await getTodos()
     SetRecetas(data)
   }
-  console.log(comida)
+  console.log(recetas)
   return (
     <section className='crearmenu' >
     <h1 className='titulo_recetas'>Nuestras Recetas</h1>
@@ -37,7 +37,7 @@ const Recetas = () => {
 }
 
 function mostrarRecetas(recetas,comida){
-    console.log()
+   
     if(recetas.length == 0){
         return <h1>Loading...</h1>
     } else if(recetas.length != 0 && comida == "desayuno") {
@@ -46,7 +46,6 @@ function mostrarRecetas(recetas,comida){
                 {recetas.filter((receta) => {
             return receta.menuSetTime == "desayuno"})
             .map((receta) => { 
-                console.log('a')
             return(
                 <div className='recetas_Desayunos' key={receta.id}>
                     <h2>{receta.title}</h2>

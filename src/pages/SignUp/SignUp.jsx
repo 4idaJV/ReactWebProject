@@ -29,7 +29,7 @@ const SignForm = () => {
                     alert(añadirUsuario.messae)
                 } else {
                     localStorage.setItem("token", token)
-                    localStorage.setItem("nombre", username)
+                    localStorage.setItem("name", username)
                     localStorage.setItem("id", id)  
                     console.log(username,token,messae)
                     alert('You are IN!')

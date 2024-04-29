@@ -1,6 +1,6 @@
 import { useEffect,useState } from "react"
 
-const FiltradoAlmuerzo = ({recetas}) => {
+const FiltradoAlmuerzo = ({recetas,regimenMenu,alergenosMenu}) => {
     const [breakf,SetBreakf] = useState([])
     const [bollean,SetBollean] = useState(false)
     const [numero,SetNumero] = useState(0)
@@ -14,6 +14,8 @@ const FiltradoAlmuerzo = ({recetas}) => {
         //Con esto filtramos los desayunos de todas las recetas
         const desayunos = recetas.filter((breakfast)=> {
             return breakfast.menuSetTime == "almuerzo"
+        }).filter((regimen)=>{
+            return regimen.regimen == regimenMenu && regimen.alergenos != alergenosMenu
         })
         SetBreakf(desayunos)
         //numero aleatorio
@@ -27,16 +29,24 @@ const FiltradoAlmuerzo = ({recetas}) => {
             return (
                 <div>Esperando..</div>
             )
-        } else if(bollean == true) {
-            return (
-                <div className="desayuno">
-                    <h1 className='tituloComidas'>Almuerzo</h1>
-                  <p>{breakf[numero].title}</p>
-                  <p>Porciones:{breakf[numero].servingSize}</p>
-                  <p>Instruciones :{breakf[numero].instructions}</p>
-                  <img src={breakf[numero].img_url} alt="" />
-                </div>
+        } else if(breakf[numero] == undefined) {
+            console.log("hola")
+            return(
+                <>
+                <p>No tenemos una receta que cumpla estos requisitos</p>
+                </>
             )
+            
+        }else{
+            return (
+                 <div className="desayuno">
+                     <h1 className='tituloComidas'>Almuerzo</h1>
+                   <p>{breakf[numero].title}</p>
+                  <p>Porciones:{breakf[numero].servingSize}</p>
+                   <p>Instruciones :{breakf[numero].instructions}</p>
+                  <img src={breakf[numero].img_url} alt="" />
+                 </div>
+            )    
         }
     }
 

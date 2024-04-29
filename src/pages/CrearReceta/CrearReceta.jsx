@@ -10,11 +10,14 @@ const CrearReceta = () => {
   const [serv,SetServ] = useState(0);
   const [img,SetImg] = useState("");
   const [comida,SetComida] = useState("");
+  const [alergenos,SetAlergenos] = useState("");
+  const [regimen,SetRegimen] = useState("");
+
 
   let id = -1
  id = localStorage.getItem("id")
-  //console.log(titulo,descript,instrucc,coockTime,serv,prep,comida)
-  console.log(id)
+  console.log(titulo,descript,instrucc,coockTime,serv,comida,alergenos,regimen)
+  //console.log(id)
 
   async function TodasRecetas(e) {
     const crearReceta = {
@@ -25,7 +28,9 @@ const CrearReceta = () => {
       servingSize:serv,
       preparationTime:serv,
       menuSetTime:comida,
-      img_url:comida,
+      img_url:img,
+      alergenos:alergenos,
+      regimen:regimen,
       userId: id
     }
     await crearRecetaUsuario(crearReceta)
@@ -62,7 +67,24 @@ const CrearReceta = () => {
                 <option value="desayuno">Desayuno</option>
                 <option value="almuerzo">Almuerzo</option>
                 <option value="cena">Cena</option>
-            </select>     
+        </select>
+
+        <label className='labels_SignUp'>Alérgenos</label> 
+        <select value={alergenos} onChange={(e) => SetAlergenos(e.target.value)}>
+                <option value="1"></option>
+                <option value="lacteos">Lácteos</option>
+                <option value="gluten">Gluten</option>
+                <option value="huevo">Huevo</option>
+                <option value="frutoSecos">frutoSecos</option>
+        </select>
+
+        <label className='labels_SignUp'>Régimen</label> 
+        <select value={regimen} onChange={(e) => SetRegimen(e.target.value)}>
+                <option value="1"></option>
+                <option value="vegetariano">Vegetariano</option>
+                <option value="vegano">Vegano</option>
+                <option value="Omnivoro">Omnívoro</option>
+        </select>    
             <button type="submit" className='SignUp_Button'>
               Enviar receta
             </button>
