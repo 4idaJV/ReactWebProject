@@ -40,6 +40,7 @@ const Home = () => {
               src="https://img.freepik.com/free-vector/eating-variety-foods-concept-illustration_114360-11295.jpg"
               alt=""
             />
+            <button className='circleButton'></button>
             <h1 className="subtitulo">Create Your Menu</h1>
             <p>
               Our dairy meal plans offer the variety and flexibility for you to

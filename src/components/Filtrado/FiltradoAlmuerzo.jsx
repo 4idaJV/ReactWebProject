@@ -46,7 +46,7 @@ const FiltradoAlmuerzo = ({recetas,regimenMenu,alergenosMenu,actu,setActu}) => {
                   <p>Porciones:{breakf[numero].servingSize}</p>
                    <p>Instruciones :{breakf[numero].instructions}</p>
                   <img src={breakf[numero].img_url} alt="" />
-                  <p>Ingredientes :{breakf[numero].ingredients.map((ingredientes,i)=> {
+                  <p>Ingredientes : {breakf[numero].ingredients.map((ingredientes,i)=> {
                         return <h3 key={i}>{ingredientes.name}</h3> 
                     })}</p>
                  </div>
