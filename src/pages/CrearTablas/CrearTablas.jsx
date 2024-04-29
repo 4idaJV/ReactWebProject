@@ -52,31 +52,71 @@ function CrearTablas() {
 
     return (
       <>
-      <section className='crearmenu'>
+      <section className='crearTablasMenu'>
+
+      <div className='formularioCrearTablas'>
+      
+      <h1 className='titulosCrearTablas'>Selecciona el mejor tipo de dieta que se adapte a ti</h1>
+        <section className='regimen'>
+          
+            <div className='agree'>
+              <input type="checkbox" className='check' checked={regimenMenu} onChange={(event) => SetRegimenMenu(event)} />
+              <label className='label_CrearTabla'> Omnívoro
+              <p>Como Carne y pescado</p></label>
+            </div>
+
+            <div className='agree'>
+              <input type="checkbox" className='check' checked={regimenMenu} onChange={(event) => SetRegimenMenu(event)} />
+              <label className='label_CrearTabla'> Vegetariano
+              <p>Como alimentos de origen animal vegetal</p></label>
+            </div>
+            <div className='agree'>
+              <input type="checkbox" className='check'/>
+              <label className='label_CrearTabla'> Vegano
+              <p>No como alimentos de origen animal</p></label>
+            </div>
+        </section>
+          
+        <h1 className='titulosCrearTablas'>¿Tienes alguna alergia o intolerancia alimenticia?</h1>
+        <section className=''>
+          
+          <div className='alergias'>
+
+            <div className='agree'>
+              <input type="checkbox" className='check' checked={regimenMenu} onChange={(event) => SetRegimenMenu(event)} />
+              <label className='label_checkbox'> Huevo</label>
+            </div>
+
+            <div className='agree'>
+              <input type="checkbox" className='check' checked={regimenMenu} onChange={(event) => SetRegimenMenu(event)} />
+              <label className='label_checkbox'> Frutos Secos</label>
+            </div>
+
+            <div className='agree'>
+              <input type="checkbox" className='check' checked={regimenMenu} onChange={(event) => SetRegimenMenu(event)} />
+              <label className='label_checkbox'> Gluten</label>
+            </div>
+
+            <div className='agree'>
+              <input type="checkbox" className='check' checked={regimenMenu} onChange={(event) => SetRegimenMenu(event)} />
+              <label className='label_checkbox'> Lactosa</label>
+            </div>
+
+          </div>
+        </section>
+
+        <section className='aviso'>
+          <h2>Aviso Importante</h2>
+          <p>Nuestros consejos han sido revisados por expertso en nutricion y están destinados únicamente como orientación.Si sufres de una alergia alimentaria grave ,te recomendamos que consultes siempre con tu médico antes de probar alguna de nuestras recetas.</p>
+          <br/>
+          <p>Utilizamos estos datos para determinar tus necesidades nutricionales y proporcionarte sugerencias adaptadas a ti.</p>
+        </section>
 
         <div>
-          <button type='button'  onClick={handleclick1}>Crear Menu de 1 dia</button>
+          <button type='button' className='SignUp_Button'  onClick={handleclick1}>Get Menu</button>
         </div>
-        
-        
 
-        <label className='labels_SignUp'>Alérgenos
-        <select value={alergenosMenu} onChange={(e) => SetAlergenosMenu(e.target.value)}>
-                <option value="1"></option>
-                <option value="lacteos">Lácteos</option>
-                <option value="gluten">Gluten</option>
-                <option value="huevo">Huevo</option>
-                <option value="frutoSecos">frutoSecos</option>
-        </select></label> 
-
-        <label className='labels_SignUp'>Régimen
-        <select value={regimenMenu} onChange={(e) => SetRegimenMenu(e.target.value)}>
-                <option value="1"></option>
-                <option value="vegetariano">Vegetariano</option>
-                <option value="vegano">Vegano</option>
-                <option value="Omnivoro">Omnívoro</option>
-        </select></label> 
-    
+      </div>
         </section>
 
         {handleClick()}

@@ -1,6 +1,38 @@
-.crearmenu{
+/* Da el margin del header y añade la imagen de fondo */
+.crearTablasMenu{
+    margin-top:9vh;
+    background-image: url('../../../public/imagenes/fondoCrearTablas.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 20rem;
+   
+}
+
+/* Es el que da styles global al fomulario y añade un fondo blanco transparente */
+.formularioCrearTablas{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 9.5vh;
+    height: 65vh;
+    gap:10px;
+    align-items: center;
+    margin: 0 30vw;
+    margin-top: 5vh ;
+    width: 50%;
+    background-color: rgba(228, 229, 227, 0.575);
+}
+
+.alergias{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 40px;
+}
+
+/* Se encarga de modificar los enunciados de cada seccion */
+.titulosCrearTablas{
+    margin-top: 1rem;
+}
+.label_CrearTabla{
+    font-size: 20px;
 }
