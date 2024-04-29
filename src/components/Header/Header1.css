@@ -29,11 +29,12 @@
  margin-left: 35px;
  margin-top: 7px;
 }
-
+/* Icono de perfil usuario */
 .login {
     background-color: transparent;
     border: none; 
 }
+
 
 .login img {
         width: 30px; 
