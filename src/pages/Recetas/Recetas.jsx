@@ -51,6 +51,7 @@ function mostrarRecetas(recetas,comida){
                     <h2>{receta.title}</h2>
                     <p>Tiempo de Elaboracion: {receta.cookingTime} </p>
                     <img className='imagen_recetas' src={receta.img_url} alt="" />
+                    <p>ingredientes {receta.cookingTime} </p>
                 </div>
             );
         })}
@@ -96,9 +97,12 @@ function mostrarRecetas(recetas,comida){
                 {recetas.map((receta) => {
                     return(
                         <div className='recetas' key={receta.id}>
-                            <h2>{receta.title}</h2>
+                            <h2>{receta.title}</h2>asta
                             <p>Tiempo de Elaboracion: {receta.cookingTime} </p>
                             <img className='imagen_recetas' src={receta.img_url} alt="" />
+                            <p>ingredientes {receta.ingredients.map((ingredientes,i)=> {
+                                return <p key={i}>{ingredientes.name}</p>
+                            })} </p>
                         </div>
                     );
                 })}

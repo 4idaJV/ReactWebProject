@@ -8,6 +8,7 @@ import FiltradoCena from '../../components/Filtrado/FiltradoCena.jsx'
 function CrearTablas() {
   const [recetas,SetRecetas] = useState([]);
   const [boolean,SetBollean] = useState(false);
+  const [actu,setActu] = useState(false)
   const [alergenosMenu,SetAlergenosMenu] = useState("");
   const [regimenMenu,SetRegimenMenu] = useState("");
 
@@ -22,6 +23,7 @@ function CrearTablas() {
 
   function handleclick1(e){
     SetBollean(true)
+    setActu(true)
   }
 
   function handleClick(){
@@ -29,13 +31,13 @@ function CrearTablas() {
         return(
           <div>
             <div>
-              <FiltradoDesayuno recetas={recetas} regimenMenu={regimenMenu} alergenosMenu={alergenosMenu} />
+              <FiltradoDesayuno recetas={recetas} regimenMenu={regimenMenu} alergenosMenu={alergenosMenu} actu={actu} setActu={setActu} />
             </div>
             <div>
-               <FiltradoAlmuerzo recetas={recetas} regimenMenu={regimenMenu} alergenosMenu={alergenosMenu}/> 
+              <FiltradoAlmuerzo recetas={recetas} regimenMenu={regimenMenu} alergenosMenu={alergenosMenu} actu={actu}  setActu={setActu}/>
             </div>
             <div>
-               <FiltradoCena recetas={recetas} regimenMenu={regimenMenu}  alergenosMenu={alergenosMenu}/> 
+              <FiltradoCena recetas={recetas} regimenMenu={regimenMenu}  alergenosMenu={alergenosMenu} actu={actu}  setActu={setActu}/>
             </div>
           </div>
           )

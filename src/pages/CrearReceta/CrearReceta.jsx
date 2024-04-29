@@ -1,6 +1,7 @@
 import './CrearReceta.css'
 import {crearRecetaUsuario} from '../../services/recetasUser.js'
 import {useState,useEffect} from 'react'
+import UploadWidget from '../../components/UploadWidget/UploadWidget.jsx'
 
 const CrearReceta = () => {
   const [titulo,SetTitulo] = useState("");
@@ -13,18 +14,14 @@ const CrearReceta = () => {
   const [alergenos,SetAlergenos] = useState("");
   const [regimen,SetRegimen] = useState("");
 
-
-  let id = -1
- id = localStorage.getItem("id")
-  console.log(titulo,descript,instrucc,coockTime,serv,comida,alergenos,regimen)
+ let id = localStorage.getItem("id")
+  //console.log(titulo,descript,instrucc,coockTime,serv,comida,alergenos,regimen)
   //console.log(id)
 
   async function TodasRecetas(e) {
+    console.log("string")
+    e.preventDefault()
     const crearReceta = {
-      title:titulo,
-      description:descript,
-      instructions:instrucc,
-      cookingTime:coockTime,
       servingSize:serv,
       preparationTime:serv,
       menuSetTime:comida,
@@ -41,7 +38,7 @@ const CrearReceta = () => {
     <section className='CrearReceta'>
      <h1 className='titulo_CrearReceta'>Crear Receta</h1>
 
-      <form  onSubmit={TodasRecetas} className='FormularioRecetas'>
+      <form  className='FormularioRecetas'>
 
         <label className='labels_SignUp'>Nombre Receta </label>         
         <input type="text" className='input_SignUp' placeholder= "Tu Receta" value={titulo} onChange={(e) => SetTitulo(e.target.value)}/>
@@ -60,7 +57,7 @@ const CrearReceta = () => {
 
         <label className='labels_SignUp'>Cantidad de porciones</label>         
         <input type="number" className='input_SignUp' placeholder= "" value={serv} onChange={(e) => SetServ(e.target.value)}/>
-
+        <UploadWidget/>
         <label className='labels_SignUp'>Tipo de comida</label> 
         <select value={comida} onChange={(e) => SetComida(e.target.value)}>
                 <option value="1"></option>
@@ -85,10 +82,11 @@ const CrearReceta = () => {
                 <option value="vegano">Vegano</option>
                 <option value="Omnivoro">Omnívoro</option>
         </select>    
-            <button type="submit" className='SignUp_Button'>
+            <button onClick={TodasRecetas}  type="submit" className='SignUp_Button'>
               Enviar receta
             </button>
       </form>
+     
     </section>
   )
 }

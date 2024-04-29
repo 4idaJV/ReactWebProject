@@ -1,6 +1,6 @@
 import { useEffect,useState } from "react"
 
-const FiltradoAlmuerzo = ({recetas,regimenMenu,alergenosMenu}) => {
+const FiltradoAlmuerzo = ({recetas,regimenMenu,alergenosMenu,actu,setActu}) => {
     const [breakf,SetBreakf] = useState([])
     const [bollean,SetBollean] = useState(false)
     const [numero,SetNumero] = useState(0)
@@ -21,8 +21,9 @@ const FiltradoAlmuerzo = ({recetas,regimenMenu,alergenosMenu}) => {
         //numero aleatorio
         const random = Math.floor(  Math.random() * desayunos.length)
         SetNumero(random)
+        setActu(false)
           return () => clearTimeout(timeoutId);  
-    },[bollean])
+    },[actu])
 
     function comprobar(){
         if(bollean == false){
@@ -45,6 +46,9 @@ const FiltradoAlmuerzo = ({recetas,regimenMenu,alergenosMenu}) => {
                   <p>Porciones:{breakf[numero].servingSize}</p>
                    <p>Instruciones :{breakf[numero].instructions}</p>
                   <img src={breakf[numero].img_url} alt="" />
+                  <p>Ingredientes :{breakf[numero].ingredients.map((ingredientes,i)=> {
+                        return <h3 key={i}>{ingredientes.name}</h3> 
+                    })}</p>
                  </div>
             )    
         }

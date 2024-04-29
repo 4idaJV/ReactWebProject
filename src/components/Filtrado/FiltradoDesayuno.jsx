@@ -1,11 +1,11 @@
 import { useState,useEffect } from "react";
 
-const FiltradoDesayuno = ({recetas,regimenMenu,alergenosMenu}) => {
+const FiltradoDesayuno = ({recetas,regimenMenu,alergenosMenu,actu,setActu}) => {
     const [breakf,SetBreakf] = useState([])
     const [bollean,SetBollean] = useState(false)
     const [numero,SetNumero] = useState(0)
 
-    console.log(regimenMenu,alergenosMenu)
+    console.log(regimenMenu,alergenosMenu,actu)
     useEffect(() => {
         //Esto se usa para generar un tiempo y asi tener tiempo de recuperar la informacion
         const timeoutId = setTimeout(() => {
@@ -21,8 +21,9 @@ const FiltradoDesayuno = ({recetas,regimenMenu,alergenosMenu}) => {
         //numero aleatorio
         const random = Math.floor(  Math.random() * desayunos.length)
         SetNumero(random)
+        setActu(false)
           return () => clearTimeout(timeoutId);  
-    },[bollean])
+    },[actu])
 
     function comprobar(){
         if(bollean == false){
@@ -45,6 +46,9 @@ const FiltradoDesayuno = ({recetas,regimenMenu,alergenosMenu}) => {
                   <p>Porciones:{breakf[numero].servingSize}</p>
                    <p>Instruciones :{breakf[numero].instructions}</p>
                   <img src={breakf[numero].img_url} alt="" />
+                  <p>{breakf[numero].ingredients.map((ingredientes,i)=> {
+                        return <h3 key={i}>{ingredientes.name}</h3> 
+                    })}</p>
                  </div>
             )    
         }
