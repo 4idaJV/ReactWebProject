@@ -23,13 +23,14 @@ const SignForm = () => {
 
             const usuario = {name:fullName,email:email,password:password}
             const añadirUsuario = await signUp(usuario)
-            const {token,messae,username} = añadirUsuario 
-
+            const {token,messae,username,id} = añadirUsuario 
+                console.log(añadirUsuario)
                 if(messae == 'User already exits'){ 
                     alert(añadirUsuario.messae)
                 } else {
                     localStorage.setItem("token", token)
-                    localStorage.setItem("nombre", username)  
+                    localStorage.setItem("nombre", username)
+                    localStorage.setItem("id", id)  
                     console.log(username,token,messae)
                     alert('You are IN!')
                     history('/');

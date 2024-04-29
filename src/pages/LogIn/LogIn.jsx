@@ -16,7 +16,11 @@ const Logear = () => {
         if(validatePassword() && validateEmail()){
             const user = {email:email, password:password}
             const logearUsuario = await logIn(user)
-            localStorage.setItem("token",logearUsuario.token)
+            const {token,id,nombre} = logearUsuario
+            console.log(logearUsuario)
+            localStorage.setItem("token",token)
+            localStorage.setItem("id",id)
+            localStorage.setItem("name",nombre)
             alert('Bienvenido')
             history('/');
         } else {

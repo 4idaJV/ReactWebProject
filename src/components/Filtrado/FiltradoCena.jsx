@@ -30,6 +30,7 @@ const FiltradoCena = ({recetas}) => {
         } else if(bollean == true) {
             return (
                 <div className="desayuno">
+                     <h1 className='tituloComidas'>Cena</h1>
                   <p>{breakf[numero].title}</p>
                   <p>Porciones:{breakf[numero].servingSize}</p>
                   <p>Instruciones :{breakf[numero].instructions}</p>

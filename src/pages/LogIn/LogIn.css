@@ -7,7 +7,7 @@
     gap: 10px;
 }
 .imagen_signUp2{
-    background-image: url('https://media.discordapp.net/attachments/1230946326078947429/1233356053136277635/log_in.jpeg?ex=662ccbd5&is=662b7a55&hm=d5fec0218a250eba065676be9701a6a9b1c1d18bb80fc1fd043928fff7ed3bc2&=&format=webp&width=363&height=544');
+    background-image: url('../../../public/imagenes/log_in.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
