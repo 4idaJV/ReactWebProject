@@ -21,10 +21,7 @@ const Header = () => {
     }
   }
 
-  function handleLogOut(e){
-    localStorage.clear();
-    navegate("/");
-  }
+ 
 
   return (
     <header className="header">
@@ -51,9 +48,7 @@ const Header = () => {
         </div>
       </section>
       <section id="sectionHeader2">
-        <button className="boton" onClick={handleLogOut}>
-            Log Out
-        </button>
+        
         <button className="boton" onClick={handleClick}>
           CREATE MENU
         </button>

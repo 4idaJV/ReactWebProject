@@ -12,14 +12,35 @@ const FiltradoDesayuno = ({recetas,regimenMenu,alergenosMenu,actu,setActu}) => {
             SetBollean(true); 
           }, 300);
         //Con esto filtramos los desayunos de todas las recetas
-        const desayunos = recetas.filter((breakfast)=> {
+        if(alergenosMenu != "" && regimenMenu != ""){
+            const desayunos = recetas.filter((breakfast)=> {
             return breakfast.menuSetTime == "desayuno"
-        }).filter((regimen)=>{
+                }).filter((regimen)=>{
             return regimen.regimen == regimenMenu && regimen.alergenos != alergenosMenu
-        })  
-        SetBreakf(desayunos)
+            })
+            SetBreakf(desayunos)
+        } else if(alergenosMenu != ""){
+            const desayunos = recetas.filter((breakfast)=> {
+                return breakfast.menuSetTime == "desayuno"
+                    }).filter((regimen)=>{
+                return regimen.alergenos != alergenosMenu
+                })
+                SetBreakf(desayunos)
+        } else if(regimenMenu != ""){
+            const desayunos = recetas.filter((breakfast)=> {
+                return breakfast.menuSetTime == "desayuno"
+                    }).filter((regimen)=>{
+                return regimen.regimen == regimenMenu
+                })
+                SetBreakf(desayunos)
+        } else {
+            const desayunos = recetas.filter((breakfast)=> {
+                return breakfast.menuSetTime == "desayuno"
+                })
+                SetBreakf(desayunos)
+        } 
         //numero aleatorio
-        const random = Math.floor(  Math.random() * desayunos.length)
+        const random = Math.floor(  Math.random() * breakf.length)
         SetNumero(random)
         setActu(false)
           return () => clearTimeout(timeoutId);  
@@ -31,7 +52,7 @@ const FiltradoDesayuno = ({recetas,regimenMenu,alergenosMenu,actu,setActu}) => {
                 <div>Esperando..</div>
             )
         } else if(breakf[numero] == undefined) {
-            console.log("hola")
+           
             return(
                 <>
                 <p>No tenemos una receta que cumpla estos requisitos</p>
@@ -47,7 +68,7 @@ const FiltradoDesayuno = ({recetas,regimenMenu,alergenosMenu,actu,setActu}) => {
                    <p>Instruciones :{breakf[numero].instructions}</p>
                   <img src={breakf[numero].img_url} alt="" />
                   <p>{breakf[numero].ingredients.map((ingredientes,i)=> {
-                        return <h3 key={i}>{ingredientes.name}</h3> 
+                        return <span key={i}>{ingredientes.name}</span> 
                     })}</p>
                  </div>
             )    
