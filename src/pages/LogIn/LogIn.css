@@ -15,10 +15,20 @@
 }
 .imagen_signUp2{
     background-image: url('../../../public/imagenes/pexels-cristian-rojas-8448335.jpg');
-    background-size: cover;
-    background-position: center;
+    background-size: cover; 
+    background-position: center; 
     background-repeat: no-repeat;
+    height: 100vh; /* Ajusta la altura del contenedor para que ocupe toda la altura de la ventana del navegador */
+    display: flex; /* Permite el uso de flexbox para centrar verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
 }
+
+
+
+
+
+
 .form_LogIn ::placeholder{
     color: #6161615c;
 }

@@ -1,9 +1,22 @@
+
 body {
   font-family: 'Montserrat', sans-serif;
-  min-width: 100vw;
-  min-height: 100vh;
   margin: 0;
   padding: 0;
+  min-width: 100vw;
+  min-height: 100vh; /* Altura mínima de la ventana del navegador */
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1; /* El contenido ocupa todo el espacio restante */
+  margin-bottom: 100px; /* Margen inferior para dejar espacio para el footer */
+}
+
+.footer {
+  height: 35vh; /* Altura fija del footer */
+  /* Otros estilos */
 }
 
 #root {

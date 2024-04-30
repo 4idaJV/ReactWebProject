@@ -1,12 +1,11 @@
 .footer {
   background-color: #272727;
   color: white;
-  width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   padding: 1% 0;
   justify-content: space-between;
+  height: 30vh;
 }
 
 .footerSection {
@@ -63,4 +62,7 @@
   width: 20%;
 }
 
-
+.textoCopyright{
+  color: #797777;
+  font-weight: bold;
+}

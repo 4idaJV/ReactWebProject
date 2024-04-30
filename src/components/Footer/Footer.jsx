@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footerSection">
         <img src="../public/imagenes/1.png" alt="Logo" className="footerImage" />
-        <p className='textoCopyright'>© Copyright Sazzón 2024</p>
+        <p className='textoCopyright'>© Sazzón Express, Inc 2024</p>
       </div>
       <div className='footerSection'>
         <p className='titles'></p>

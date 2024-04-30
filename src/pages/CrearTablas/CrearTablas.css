@@ -1,26 +1,26 @@
 /* Da el margin del header y añade la imagen de fondo */
-.crearTablasMenu{
-    margin-top:9vh;
+.crearTablasMenu {
+    margin-top: 9vh;
     background-image: url('../../../public/imagenes/fondoCrearTablas.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 20rem;
-   
 }
+
 
 /* Es el que da styles global al fomulario y añade un fondo blanco transparente */
 .formularioCrearTablas{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 65vh;
+    height: 75vh;
     gap:10px;
     align-items: center;
     margin: 0 30vw;
     margin-top: 5vh ;
     width: 50%;
-    background-color: rgba(228, 229, 227, 0.575);
+    background-color: rgba(255, 255, 255, 0.788);
 }
 
 .alergias{
@@ -35,4 +35,60 @@
 }
 .label_CrearTabla{
     font-size: 20px;
+/*     font-weight: bold;
+ */}
+
+ h2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-weight: bolder;
+ }
+
+ .buttonGetMenu{
+    margin-bottom: 20px;
+ }
+ 
+ .aviso{
+    margin: 15px;;
+ }
+
+ .tituloscategorias{
+    color: rgb(10, 10, 10);
+    font-weight: bold;
+ }
+ .iconAlergic {
+     width: 40px;
+     height: 40px; 
+ }
+
+ .alergias {
+    display: flex;
+    flex-direction: column;
 }
+
+.fila {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Espacio entre las filas */
+}
+
+.agree {
+    display: flex;
+    align-items: center;
+}
+
+.label_checkbox {
+    margin-left: 2px; /* Espacio entre el icono y el texto */
+}
+
+.iconAlergic {
+    width: 30px; /* Tamaño de los iconos */
+    height: 30px;
+    margin-right: 10px; /* Espacio entre el icono y el checkbox */
+}
+
+.check {
+    border: 50px;
+}
+

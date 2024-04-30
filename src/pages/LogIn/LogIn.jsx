@@ -40,6 +40,10 @@ const Logear = () => {
          <div className='imagen_signUp2'>
         </div>
         <form className='form_LogIn' onSubmit={handleLogIn}>
+        <div class="button-container">
+            <button class="login-button">Login</button>
+            <button class="signin-button">Sign Up</button>
+          </div>
 
             <label className='labels_SignUp'>E-MAIL </label>
             <input type="email" placeholder= "Enter you e-mail address" className='input_SignUp'  value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -54,7 +58,6 @@ const Logear = () => {
             <button type="submit" className='SignUp_Button'>
                 Log In
             </button>
-            <Link to='/SignUp'><button className='SignUp_Button' type='button'>SignUp</button></Link>
        
         </form>
     </section>

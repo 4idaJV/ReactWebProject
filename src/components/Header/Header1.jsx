@@ -42,11 +42,11 @@ const Header = () => {
           </Link>
 
           <Link to="/Perfil">
-            <p>TU PERFIL</p>
+            <p>PROFILE</p>
           </Link>
 
           <Link to="/CrearReceta">
-            <p>CREAR RECETA</p>
+            <p>CREATE RECIPE</p>
           </Link>
         </div>
       </section>
