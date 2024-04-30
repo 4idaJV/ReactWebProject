@@ -16,11 +16,8 @@ function FiltradoTusRecetas({crearRecetas}) {
           {crearRecetas.map((receta) => {
               return(
                   <div className='recetas' key={receta.id}>
-                      <h2>{receta.title}</h2>
-                      <p>Tiempo de Elaboracion: {receta.cookingTime} </p>
                       <img src={receta.img_url} className='imagen_recetas'  alt="" />
-                      <p>Alérgenos:{receta.alergenos}</p>
-                      <p>Régimen:{receta.regimen}</p>
+                      <p className='RecetaTitulo'>{receta.title}</p>
                   </div>
               );
           })} 
@@ -31,9 +28,9 @@ function FiltradoTusRecetas({crearRecetas}) {
 
 
   return (
-    <>
+    <section className='misRecetas'>
     {mapTusRecetas()} 
-    </>
+    </section>
   )
 }
 
