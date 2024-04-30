@@ -1,10 +1,12 @@
 import './Recetas.css'
 import {getTodos} from '../../services/recetas.js'
 import {useState, useEffect} from 'react'
+import Filtrado from '../../components/Filtrado/Filtrado.jsx'
 
 const Recetas = () => {
     const [recetas,SetRecetas] = useState([]);
     const [comida,SetComida] = useState('')
+    const [ids,SetId] = useState("")
 
   useEffect(()=> {
     TodasRecetas()
@@ -14,7 +16,8 @@ const Recetas = () => {
     const data = await getTodos()
     SetRecetas(data)
   }
-  console.log(recetas)
+
+
   return (
     <section className='crearmenu' >
     <h1 className='titulo_recetas'>Nuestras Recetas</h1>
@@ -27,15 +30,21 @@ const Recetas = () => {
                 <option value="cena">Cena</option>
             </select>
         </label>
-    </div>
         
+    </div>
+        {recetas.map((recetas) => {
+      return <Filtrado key={recetas.id} recetas={recetas} SetId={SetId} ids={ids}/>
+      })}
+
+    
     <div className='grid_recetas'>
-      {mostrarRecetas(recetas,comida)}
+    
+      {/* {mostrarRecetas(recetas,comida)} */}
     </div>
     </section>
   )
 }
-
+/*
 function mostrarRecetas(recetas,comida){
    
     if(recetas.length == 0){
@@ -94,7 +103,10 @@ function mostrarRecetas(recetas,comida){
     }else if(recetas.length != 0 ){
         return(
             <>
-                {recetas.map((receta) => {
+
+
+           
+                {/* {recetas.map((receta) => {
                     return(
                         <div className='recetas' key={receta.id}>
                             <h2>{receta.title}</h2>asta
@@ -103,12 +115,13 @@ function mostrarRecetas(recetas,comida){
                             <p>ingredientes {receta.ingredients.map((ingredientes,i)=> {
                                 return <p key={i}>{ingredientes.name}</p>
                             })} </p>
+                            <input type='checkbox' onClick={handleFav}>Favoritos</input>
                         </div>
                     );
-                })}
+                })} }
             </>
             )
     }
 }
-
+*/
 export default Recetas

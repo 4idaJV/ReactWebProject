@@ -1,4 +1,11 @@
-
+.recetas{
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(44, 212, 212, 0.551);
+    border-radius:0px 0px 30px 30px;
+}
 .desayuno{
     display: flex;
     flex-direction: column;
@@ -8,9 +15,9 @@
 .imagen_recetas{
     display: flex;
     margin: 0 auto;
-    width:200px;
-    height:200px;
+    width:180px;
+    height:180px;
     border-radius: 20px;
     background-size: cover;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }

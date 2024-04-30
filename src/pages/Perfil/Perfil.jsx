@@ -2,11 +2,14 @@ import './Perfil.css'
 import {getRecetasUser} from '../../services/getRecetasUser.js'
 import { useState,useEffect } from 'react'
 import FiltradoTusRecetas from '../../components/Filtrado/FiltradoTusRecetas.jsx'
+import FiltradoTusRecetasFav from '../../components/Filtrado/FiltradoRecetasFav.jsx'
 import { useNavigate } from "react-router-dom";
+import {getRecetasFav} from '../../services/getRecetasFav.js'
 
 const Perfil = () => {
   const navegate = useNavigate();
   const [crearRecetas,SetCrearRecetas] = useState([])
+  const [crearRecetasFAV,SetCrearRecetasFAV] = useState([])
   const [nombreUser,SetnombreUser] = useState("")
   //let token = localStorage.setItem("token")
  // let name =localStorage.setItem("nombre")
@@ -20,6 +23,7 @@ const Perfil = () => {
     useEffect(() => {
       RecetasUsuario()
       SetnombreUser(nombre)
+      getRecetasFavoritos()
     },[])
 
   }  
@@ -28,10 +32,18 @@ const Perfil = () => {
       SetCrearRecetas(recipeUsers)
   }
 
+  async function getRecetasFavoritos() {
+    const {recipes} = await getRecetasFav(id)
+    SetCrearRecetasFAV(recipes)
+}
+
+
   function handleLogOut(e){
     localStorage.clear();
     navegate("/");
   }
+
+  console.log(crearRecetasFAV)
 
   return (
     <section className='TuPerfil'>
@@ -82,13 +94,13 @@ const Perfil = () => {
 
           <div className='BienvenidoUser'>
             <h1 className='textoBienvenido'>Welcome! <br/>
-            <span className='textousuario'>Quasimodo Lorenzo{nombre}</span> </h1>
+            <span className='textousuario'>{nombreUser}</span> </h1>
            
           </div>
 
-          <div className='iconos' >
+          {/* <div className='iconos' >
             <p>iconos</p>
-          </div>
+          </div> */}
 
           <div className='MisPlatos'>
 
@@ -100,7 +112,7 @@ const Perfil = () => {
 
             <div className='ContenedorRecetasUsuario'>
               <h3 className='tituloCont'>My Saved Recipes</h3>
-              <FiltradoTusRecetas crearRecetas={crearRecetas} />
+              <FiltradoTusRecetasFav crearRecetasFAV={crearRecetasFAV} />
               <div className='borderyellow '></div>
             </div>
 

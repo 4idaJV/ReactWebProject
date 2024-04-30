@@ -1,7 +1,7 @@
 import './CrearReceta.css'
 import {crearRecetaUsuario} from '../../services/recetasUser.js'
 import {useState,useEffect} from 'react'
-import UploadWidget from '../../components/UploadWidget/UploadWidget.jsx'
+
 
 const CrearReceta = () => {
   const [titulo,SetTitulo] = useState("");
@@ -15,20 +15,19 @@ const CrearReceta = () => {
   const [regimen,SetRegimen] = useState("");
 
  let id = localStorage.getItem("id")
-  //console.log(titulo,descript,instrucc,coockTime,serv,comida,alergenos,regimen)
-  //console.log(id)
 
   async function TodasRecetas(e) {
-    console.log("string")
-    e.preventDefault()
     const crearReceta = {
+      title:titulo,
+      description:descript,
+      instructions:instrucc,
+      coockingTime:coockTime,
       servingSize:serv,
-      preparationTime:serv,
       menuSetTime:comida,
       img_url:img,
       alergenos:alergenos,
       regimen:regimen,
-      userId: id
+      userId: id,
     }
     await crearRecetaUsuario(crearReceta)
   } 
@@ -57,7 +56,7 @@ const CrearReceta = () => {
 
         <label className='labels_SignUp'>Cantidad de porciones</label>         
         <input type="number" className='input_SignUp' placeholder= "" value={serv} onChange={(e) => SetServ(e.target.value)}/>
-        <UploadWidget/>
+
         <label className='labels_SignUp'>Tipo de comida</label> 
         <select value={comida} onChange={(e) => SetComida(e.target.value)}>
                 <option value="1"></option>

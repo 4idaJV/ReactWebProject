@@ -12,14 +12,37 @@ const FiltradoAlmuerzo = ({recetas,regimenMenu,alergenosMenu,actu,setActu}) => {
             SetBollean(true); 
           }, 300);
         //Con esto filtramos los desayunos de todas las recetas
-        const desayunos = recetas.filter((breakfast)=> {
+
+        if(alergenosMenu != "" && regimenMenu != ""){
+            const desayunos = recetas.filter((breakfast)=> {
             return breakfast.menuSetTime == "almuerzo"
-        }).filter((regimen)=>{
+                }).filter((regimen)=>{
             return regimen.regimen == regimenMenu && regimen.alergenos != alergenosMenu
-        })
-        SetBreakf(desayunos)
+            })
+            SetBreakf(desayunos)
+        } else if(alergenosMenu != ""){
+            const desayunos = recetas.filter((breakfast)=> {
+                return breakfast.menuSetTime == "almuerzo"
+                    }).filter((regimen)=>{
+                return regimen.alergenos != alergenosMenu
+                })
+                SetBreakf(desayunos)
+        } else if(regimenMenu != ""){
+            const desayunos = recetas.filter((breakfast)=> {
+                return breakfast.menuSetTime == "almuerzo"
+                    }).filter((regimen)=>{
+                return regimen.regimen == regimenMenu
+                })
+                SetBreakf(desayunos)
+        } else {
+            const desayunos = recetas.filter((breakfast)=> {
+                return breakfast.menuSetTime == "almuerzo"
+                })
+                SetBreakf(desayunos)
+        }    
+        
         //numero aleatorio
-        const random = Math.floor(  Math.random() * desayunos.length)
+        const random = Math.floor(  Math.random() * breakf.length)
         SetNumero(random)
         setActu(false)
           return () => clearTimeout(timeoutId);  
