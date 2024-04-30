@@ -8,24 +8,28 @@ const Footer = () => {
         <p className='textoCopyright'>© Copyright Sazzón 2024</p>
       </div>
       <div className='footerSection'>
-        <p className='titles'>RANDOM THINGS</p>
-        <a href="#">Facebook</a>
-        <a href="#">Instagram</a>
+        <p className='titles'></p>
+        <a href="#"></a>
+        <a href="#"></a>
       </div>
       <div className='footerSection'>
       <p className='titles'>GET IN TOUCH</p>
         <div className='contactItem'>
-          <span className='icon'>✆</span><span className='contactInfo'>928 222 222 222</span>
+          <span className='icon'>✆</span><span className='contactInfo'>008 222 222 222 222</span>
         </div>
         <div className='contactItem'>
-          <span className='icon'>✉</span><span className='contactInfo'>sazzoncontact@gmail.com</span>
+          <span className='icon'>✉</span><span className='contactInfo'>sazzon@gmail.com</span>
         </div>
       </div>
       <div className='footerSection'>
-        <p className='titles'>SOCIAL MEDIA</p>
-        <a href="#">Facebook</a>
-        <a href="#">Instagram</a>
-      </div>
+  <p className='titles'>SOCIAL MEDIA</p>
+  <div className= 'allSocialBotons'>
+    <img src="../public/imagenes/gorjeo.png" alt="Logo" className="socialmediabotons" />
+    <img src="../public/imagenes/instagram.png" alt="Logo" className="socialmediabotons" />
+    <img src="../public/imagenes/facebook.png" alt="Logo" className="socialmediabotons" />
+  </div>
+</div>
+
     </footer>
   );
 }

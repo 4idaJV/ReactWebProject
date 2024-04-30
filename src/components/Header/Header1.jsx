@@ -57,11 +57,16 @@ const Header = () => {
         <button className="boton" onClick={handleClick}>
           CREATE MENU
         </button>
+        <div className="login"><Link to="/login">
+          <button className="login">
+            <img src="../public/imagenes/fuerza.png" alt="Log" />
+          </button>
+        </Link>
         <Link to="/login">
           <button className="login">
             <img src="../public/imagenes/cuenta.png" alt="Log" />
           </button>
-        </Link>
+        </Link></div>
       </section>
     </header>
   );

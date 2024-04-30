@@ -96,7 +96,6 @@ const Home = () => {
             <p className='spoonfullParagraph'>In just a few minutes, you'll find a carefully curated selection of delicious and healthy options that perfectly fit your lifestyle.</p>
           </div>
           <div className="sazzon-image">
-            {/*Image would go here*/}
           </div>
         </div>
       </section>

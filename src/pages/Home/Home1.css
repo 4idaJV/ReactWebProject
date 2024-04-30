@@ -154,12 +154,10 @@
 }
 
 .sazzon-image {
-  background-image: url('../../../public/imagenes/pexels-cristian-rojas-8448335.jpg');
+  background-image: url('../../../public/imagenes/plate1.jpg');
   background-repeat: no-repeat;
-
-  background-size: 100%;
-  background-position: center center;
-
+  background-size: cover;
+  background-position: 100% 100%;
 }
 
 
@@ -183,10 +181,10 @@
 }
 
 .recipe-image{
-  background-image: url('../../../public/imagenes/pexels-cristian-rojas-8448335.jpg');
+  background-image: url('../../../public/imagenes/spoons.png');
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center center;
+  background-position: center;
+  background-position: 50% 100%;
 }
 
 .titleEnd{

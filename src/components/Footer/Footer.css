@@ -12,42 +12,36 @@
 .footerSection {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centra verticalmente el contenido dentro de la sección */
-  align-items: center; /* Centra horizontalmente el contenido */
-  width: 25%; /* Cada sección ocupa el 25% del ancho del footer */
-  height: 100%; 
-}
-
-.logoFooter {
-  display: flex; /* Usar flex en lugar de grid para controlar mejor la dirección */
-  flex-direction: column; 
-  align-items:center; /* Centra horizontalmente los elementos en el contenedor */
-  justify-content: center; /* Centra verticalmente los elementos en el contenedor */
+  justify-content: center; 
+  align-items: center; 
+  width: 25%; 
+  height: 100%;
 }
 
 .footerImage {
-  width: 50%;
+  width: 40%;
   margin-bottom: 10px;
 }
 
 .contacto {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Alinea los elementos al inicio (izquierda) */
+  align-items: flex-start; 
   justify-content: center;
-  padding-left: 20px; /* Añadir si es necesario para alinear con otros elementos del footer */
+  padding-left: 20px; 
 }
 
 .titles {
   font-size: 1.6em;
   font-weight: bold;
-  margin-bottom: 10px;
+  display: inline-block;
 }
 
 .contactItem {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Asegura que el contenido también esté alineado a la izquierda */
+  justify-content: flex-start;
+  
 }
 
 .icon {
@@ -58,4 +52,15 @@
 .contactInfo {
   font-size: 1em;
 }
+
+.allSocialBotons {
+  display: flex;
+  justify-content: center; 
+}
+
+.socialmediabotons {
+  margin-right: 7px;
+  width: 20%;
+}
+
 
