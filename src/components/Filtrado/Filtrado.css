@@ -35,7 +35,7 @@
     background-size: cover;
     padding-bottom: 1rem;
 }
-.favDirecc{
+.fav{
   width: 20%;
   border-radius: 20px;
   background-color: rgb(238, 205, 39);
@@ -44,4 +44,14 @@
 .centrarRecetas{
     display: flex;
     justify-content:center ;
+}
+.recc{
+    width: 20%;
+    border-radius: 20px;
+    background-color: rgb(231, 142, 19);
+    cursor: pointer;
+}
+
+.tituloTargetas{
+    margin-top: 10px;
 }

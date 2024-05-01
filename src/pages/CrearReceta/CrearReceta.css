@@ -73,14 +73,24 @@ input::placeholder{
 }
 
 .selectBoxes {
+    width: 100%;
     display: flex;
     justify-content: space-between;
+<<<<<<< HEAD
     width: 100%;    
+=======
+    
+>>>>>>> 41e544015d46eeceb5c757d5686676eb168f20ec
 }
 
 .individualSelectBox {
     display: flex;
+<<<<<<< HEAD
     flex-direction: column;   
+=======
+    flex-direction: column;
+    
+>>>>>>> 41e544015d46eeceb5c757d5686676eb168f20ec
 }
 
 .boxScroll {
@@ -110,3 +120,4 @@ input::placeholder{
     box-shadow: 0px 4px 4px #00000040;
     margin-top: 70px;
 }
+

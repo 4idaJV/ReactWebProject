@@ -29,7 +29,7 @@ const PaginaReceta = () => {
         return(
             <>
              {recetas.ingredients.map((ingredt,i) => {
-                return <li key={i}>{ingredt.name}</li>})}
+                return <li key={i} className='pasosRecetas'>{ingredt.name}</li>})}
             </> 
           ) 
         }
@@ -49,21 +49,32 @@ const PaginaReceta = () => {
             <h1 className='titleOneRecipe'>{recetas.title}</h1>
 
             <div className='FlexTiempos' >
-              <div>
-                <p>Preparation</p>
-                <p className='P_recetas'>{recetas.preparationTime} min</p>
+              <div className='flexdeTiempos'>
+                <img className='socialmediabotons1' src="../public/imagenes/reloj.png" alt="" />
+                <div>
+                  <p className='pasosRecetas'>Preparation</p>
+                  <p className='pasosRecetas' >{recetas.preparationTime} min</p>
+                </div>
+                
               </div>
 
-               <div>
-                <p>Cooking Time</p>
-                <p className='P_recetas'>{recetas.cookingTime} min</p>
+               <div className='flexdeTiempos'>
+               <img className='socialmediabotons1' src="../public/imagenes/reloj.png" alt="" />
+                 <div>
+                   <p className='pasosRecetas'>Cooking Time</p>
+                   <p className='pasosRecetas'>{recetas.cookingTime} min</p>
+                </div>
                </div>
                
-               <div>
-                <p className='P_recetas'>{recetas.servingSize} People</p>
-               </div>
-               
-               <p className='P_recetas'>{recetas.alergenos} , {recetas.regimen}</p>
+               <div className='flexdeTiempos'>
+                  <img className='socialmediabotons1' src="../public/imagenes/plato.png" alt="" />
+                  <div>
+                    <p className='pasosRecetas'>{recetas.servingSize} People</p>
+                  </div>
+                  
+                </div>
+              
+               <p className='pasosRecetas'>{recetas.alergenos} , {recetas.regimen}</p>
             </div>
 
             <div className='MarginIngredients'>
@@ -80,11 +91,8 @@ const PaginaReceta = () => {
         <div>
         <h1 className='IngredientesTitulo space'>INSTRUCCIONS</h1>
         <div className='row2'>
-          <p>1  <span className='pasosRecetas'>{recetas.instructions}</span></p>
-          <p>2  <span className='pasosRecetas'>{recetas.instructions}</span></p>
-          <p>3  <span className='pasosRecetas'>{recetas.instructions}</span></p>
-          <p>4  <span className='pasosRecetas'>{recetas.instructions}</span></p>
-          <p>5  <span className='pasosRecetas'>{recetas.instructions}</span></p> 
+          <p><span className='pasosRecetas'>{recetas.instructions}</span></p>
+          
           <p className='borderyellow'></p>
         </div>
         </div>

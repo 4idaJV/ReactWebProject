@@ -57,6 +57,8 @@ const CrearReceta = () => {
           <label className='labels_SignUp1'>SERVING SIZE</label>
           <input type="number" className='input_SignUp1' placeholder="" value={serv} onChange={(e) => SetServ(e.target.value)} />
 
+
+        
           <div className='selectBoxes'>
             <div className='individualSelectBox'>
               <label className='labels_SignUp1'>TYPE OF MEAL</label>
@@ -90,6 +92,8 @@ const CrearReceta = () => {
               </select>
             </div>
           </div>
+  
+
           <button type="submit" className='SignUp_ButtonCrearRecetas'>
             Create Recipe
           </button>
