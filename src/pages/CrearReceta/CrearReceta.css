@@ -1,15 +1,27 @@
-.CrearReceta{
+.CrearReceta {
     margin-top: 8vh;
+    height: 100%;
+    background-image: url(../../../public/imagenes/pexels-katerina-holmes-5907574.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    z-index: 1; 
 }
-.FormularioRecetas{
+
+
+.FormularioRecetas {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap:10px;
+    gap: 10px;
     align-items: center;
     margin: 5% 10%;
+    background-color: white;
+    
 }
-.titulo_CrearReceta{
+
+.titulo_CrearReceta {
     margin-top: 2rem;
     text-align: center;
 }
