@@ -62,13 +62,12 @@ const FiltradoDesayuno = ({recetas,regimenMenu,alergenosMenu,actu,setActu}) => {
         }else{
             return (
                  <div className="desayuno">
-                     <h1 className='tituloComidas'>Desayuno</h1>
-                   <p>{breakf[numero].title}</p>
-                  <p>Porciones:{breakf[numero].servingSize}</p>
-                   <p>Instruciones :{breakf[numero].instructions}</p>
-                  <img src={breakf[numero].img_url} alt="" />
-                  <p>{breakf[numero].ingredients.map((ingredientes,i)=> {
-                        return <span key={i}>{ingredientes.name}</span> 
+                    <h1 className='tituloComidas'>Desayuno</h1>
+                    <p>{breakf[numero].title}</p>
+                    <p>Porciones:{breakf[numero].servingSize}</p>
+                    <img src={breakf[numero].img_url} alt="" />
+                    <p>{breakf[numero].ingredients.map((ingredientes,i)=> {
+                    return <span key={i}>{ingredientes.name}</span> 
                     })}</p>
                  </div>
             )    
