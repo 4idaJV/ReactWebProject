@@ -20,17 +20,18 @@ const Recetas = () => {
 
   return (
     <section className='crearmenu' >
-    <h1 className='titulo_recetas'>Nuestras Recetas</h1>
-    <div className='label_Recetas'>
-        <label> 
-            <select value={comida} onChange={(e) => SetComida(e.target.value)}>
-                <option value="1"></option>
-                <option value="desayuno">Desayuno</option>
-                <option value="almuerzo">Almuerzo</option>
-                <option value="cena">Cena</option>
-            </select>
-        </label>
-        
+        <div className='flexRecepieEncab'>
+            <h1 className='titulo_recetas'>RECIPES</h1>
+            <div className='label_Recetas'>
+            <label> 
+                <select value={comida} onChange={(e) => SetComida(e.target.value)}>
+                    <option value="1"></option>
+                    <option value="desayuno">Desayuno</option>
+                    <option value="almuerzo">Almuerzo</option>
+                    <option value="cena">Cena</option>
+                </select>
+            </label>
+        </div>
     </div>
     
     <div className='grid_recetas'>

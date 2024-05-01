@@ -2,7 +2,8 @@
     display: grid;
     grid-template-columns: repeat(4,1fr);
     margin: 5% 4%;
-    gap: 20px;
+    row-gap: 20px;
+  
 }
 .titulo_recetas{
     text-align: center;
@@ -44,3 +45,4 @@
     margin-top: 9vh;
     
 }
+

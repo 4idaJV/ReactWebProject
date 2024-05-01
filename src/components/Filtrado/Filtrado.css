@@ -1,10 +1,13 @@
 .recetas{
+    width:230px;
+    height:280px;
     display: flex;
     flex-direction:column ;
     justify-content: center;
     text-align: center;
-    background-color: rgba(44, 212, 212, 0.551);
-    border-radius:0px 0px 30px 30px;
+    background-color:rgba(235, 233, 232, 0.885) ;
+    border-radius:30px 30px 30px 30px;
+    padding-bottom: 30px;
 }
 .desayuno{
     display: flex;
@@ -20,4 +23,25 @@
     border-radius: 20px;
     background-size: cover;
     padding-bottom: 1rem;
+}
+
+
+.imagen_Recipe{
+    display: flex;
+    margin: 0 auto;
+    width:230px;
+    height:200px;
+    border-radius: 20px;
+    background-size: cover;
+    padding-bottom: 1rem;
+}
+.favDirecc{
+  width: 20%;
+  border-radius: 20px;
+  background-color: rgb(238, 205, 39);
+  cursor: pointer;
+}
+.centrarRecetas{
+    display: flex;
+    justify-content:center ;
 }
