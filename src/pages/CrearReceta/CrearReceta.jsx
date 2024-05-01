@@ -55,7 +55,7 @@ const CrearReceta = () => {
 
   return (
     <section className='CrearReceta'>
-      <div className='coverOpacity'>
+      
 
         <form className='FormularioRecetas' onSubmit={TodasRecetas}>
           <p className='titulo_CrearReceta'>CREATE RECIPE</p>
@@ -122,7 +122,6 @@ const CrearReceta = () => {
             Create Recipe
           </button>
         </form>
-      </div>
     </section>
   )
 }

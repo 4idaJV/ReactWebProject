@@ -6,21 +6,34 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 20rem;
+    z-index: 1;
+    position: relative;
 }
 
+.crearTablasMenu::before {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+}
 
 /* Es el que da styles global al fomulario y añade un fondo blanco transparente */
 .formularioCrearTablas{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 75vh;
+    height: 100%;
     gap:10px;
     align-items: center;
-    margin: 0 30vw;
+    margin: 0 15vw;
     margin-top: 5vh ;
-    width: 50%;
-    background-color: rgba(228, 229, 227, 0.292);
+    border-radius: 20px;
+    background-color: white;
+    padding: 4vh 3vw;
 }
 
 .alergias{
@@ -31,12 +44,25 @@
 
 /* Se encarga de modificar los enunciados de cada seccion */
 .titulosCrearTablas{
-    margin-top: 1rem;
+    font-family: 'Montserrat-Bold', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #545454;
 }
+
+.regimenTitle{
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 900;
+    color: #545454;
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+}
+ .imagenes{
+    width: 30px;
+ }
 .label_CrearTabla{
-    font-size: 20px;
-/*     font-weight: bold;
- */}
+    }
 
  h2{
     display: flex;
@@ -76,20 +102,55 @@
 .agree {
     display: flex;
     align-items: center;
+    padding: 1rem;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 900;
+    color: #AEAEAE;
+    border-bottom: 2px solid #AEAEAE;
+    margin-bottom: 10px;
 }
 
 .label_checkbox {
     margin-left: 2px; /* Espacio entre el icono y el texto */
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 900;
+    color: #545454;
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
 }
+.checkbox-custom{
+    background-image: url('../../../public/imagenes/eggs_702559.png');
+    width:20px;
+    height: 20px;
+    background-size:cover ;
+    transition: all 0.3s; 
+    margin-right: 5px;
+
+}
+
+.label_checkbox:checked + .checkbox-custom{
+    background-image: url('../../../public/imagenes/eggs_837560.png');
+}
+
+.check{
+    display:none; /* Oculta el checkbox real */
+}
+
 
 .iconAlergic {
     width: 30px; /* Tamaño de los iconos */
     height: 30px;
     margin-right: 10px; /* Espacio entre el icono y el checkbox */
+    
 }
 
-.check {
-    border: 50px;
+.check1{
+    transform: scale(2);
+    border-color: #545454;
+    margin-right: 2rem;
 }
 
 .flextablas123{
