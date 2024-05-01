@@ -15,6 +15,7 @@ function Filtrado({recetas,SetId,ids}) {
         recipeId:ids}
       await VincularUR(datos)
     }
+    
      
   return (
     <div className='centrarRecetas'> 

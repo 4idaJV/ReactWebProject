@@ -9,23 +9,6 @@
     border-radius:30px 30px 30px 30px;
     padding-bottom: 30px;
 }
-.desayuno{
-    display: flex;
-    flex-direction: column;
-    margin: 0 40%;
-    gap:10px;
-}
-.imagen_recetas{
-    display: flex;
-    margin: 0 auto;
-    width:180px;
-    height:180px;
-    border-radius: 20px;
-    background-size: cover;
-    padding-bottom: 1rem;
-}
-
-
 .imagen_Recipe{
     display: flex;
     margin: 0 auto;
@@ -51,7 +34,27 @@
     background-color: rgb(231, 142, 19);
     cursor: pointer;
 }
-
 .tituloTargetas{
     margin-top: 10px;
+}
+
+
+
+
+
+/*Esto No*/
+.imagen_recetas{
+    display: flex;
+    margin: 0 auto;
+    width:180px;
+    height:180px;
+    border-radius: 20px;
+    background-size: cover;
+    padding-bottom: 1rem;
+}
+.desayuno{
+    display: flex;
+    flex-direction: column;
+    margin: 0 40%;
+    gap:10px;
 }

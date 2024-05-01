@@ -21,7 +21,14 @@ const Header = () => {
     }
   }
 
- 
+  function handlePerfil(e) {
+    if (!tokens) {
+      alert("Registrate para acceder a tu menu");
+      navegate("/login");
+    } else {
+      navegate("/Perfil");
+    }
+  }
 
   return (
     <header className="header">
@@ -52,16 +59,16 @@ const Header = () => {
         <button className="boton" onClick={handleClick}>
           CREATE MENU
         </button>
-        <div className="login"><Link to="/login">
+        <div className="login">
+
           <button className="login">
             <img src="../public/imagenes/fuerza.png" alt="Log" />
           </button>
-        </Link>
-        <Link to="/Perfil">
-          <button className="login">
+        
+          <button className="login" onClick={handlePerfil}>
             <img src="../public/imagenes/cuenta.png" alt="Log" />
           </button>
-        </Link></div>
+       </div>
       </section>
     </header>
   );

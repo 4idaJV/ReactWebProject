@@ -1,7 +1,8 @@
 import './CrearReceta.css'
 import { crearRecetaUsuario } from '../../services/recetasUser.js'
 import { useState, useEffect } from 'react'
-
+import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 const CrearReceta = () => {
   const [titulo, SetTitulo] = useState("");
@@ -13,10 +14,16 @@ const CrearReceta = () => {
   const [comida, SetComida] = useState("");
   const [alergenos, SetAlergenos] = useState("");
   const [regimen, SetRegimen] = useState("");
-
+  const [Url_Imagen,SetUrl_Imagen] = useState("")
+  const navigate = useNavigate()
+  let tokens = localStorage.getItem("token")
   let id = localStorage.getItem("id")
 
   async function TodasRecetas(e) {
+
+    if (!tokens) {
+      alert("Registrate para acceder a tu menu");  
+    } else {   
     const crearReceta = {
       title: titulo,
       description: descript,
@@ -24,12 +31,25 @@ const CrearReceta = () => {
       coockingTime: coockTime,
       servingSize: serv,
       menuSetTime: comida,
-      img_url: img,
+      img_url: Url_Imagen,
       alergenos: alergenos,
       regimen: regimen,
       userId: id,
     }
-    await crearRecetaUsuario(crearReceta)
+    await crearRecetaUsuario(crearReceta) 
+  }
+  }
+
+  const ChangeUploadImage = async (e) => {
+    const file = e.target.files[0];
+    const data = new FormData();
+    console.log(file)
+    data.append("file" , file )
+    data.append("upload_preset" , "subir_imagenes");
+
+    const response = await axios.post("https://api.cloudinary.com/v1_1/dy0qrz2ww/image/upload",
+  data)
+   SetUrl_Imagen(response.data.secure_url)
   }
 
 
@@ -53,9 +73,13 @@ const CrearReceta = () => {
 
           <label className='labels_SignUp1'>ADD YOUR IMAGE</label>
           <input type="img" className='input_SignUp1' placeholder="" value={img} onChange={(e) => SetImg(e.target.value)} />
+          <div>
+             <input  type='file' accept='image/*' className='input_SignUp2' onChange={ChangeUploadImage} />
+          </div>
+         
 
           <label className='labels_SignUp1'>SERVING SIZE</label>
-          <input type="number" className='input_SignUp1' placeholder="" value={serv} onChange={(e) => SetServ(e.target.value)} />
+          <input type="number" className='input_SignUp1 ' placeholder="" value={serv} onChange={(e) => SetServ(e.target.value)} />
 
 
         

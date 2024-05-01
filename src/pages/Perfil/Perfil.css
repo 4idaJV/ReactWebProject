@@ -17,11 +17,12 @@
 /*Imagen usuario*/
 .imagenPerfil{
     height: 200px;
-    margin: 0 20%;
+    width: 200px;
     margin-top: 2rem;
-    background-color: chartreuse;
-    display: flex;
-    align-items: center;
+    background-size: cover;
+}
+.centrarimagenesperfil{
+    margin: 0 auto;
 }
 
 /*Datos usuario*/

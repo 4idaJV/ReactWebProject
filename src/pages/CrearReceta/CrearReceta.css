@@ -115,3 +115,17 @@ input::placeholder{
     margin-top: 70px;
 }
 
+.input_SignUp2{
+    left: 0;
+    line-height: normal;
+    white-space: nowrap;
+    font-weight: 900;
+    width: 100%;
+    padding: 5px;
+    color: #AEAEAE;
+    border: none;
+    border-bottom: 2px solid #00000037;
+    font-size: 1rem;
+    font-family: 'Montserrat-Bold', sans-serif;
+    
+}
