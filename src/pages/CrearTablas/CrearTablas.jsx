@@ -40,7 +40,7 @@ function CrearTablas() {
   }
 
 
-  function handleCheckbox(event){
+  function handleCheckbox(){
     if(regimenMenu1){
       SetRegimenMenu1(!regimenMenu1)
       SetRegimenMenu("")
@@ -48,10 +48,10 @@ function CrearTablas() {
       SetRegimenMenu1(!regimenMenu1)
       SetRegimenMenu2(false)
       SetRegimenMenu3(false)
-      SetRegimenMenu(event.target.value)
+      SetRegimenMenu("Omnivoro")
     }
  }
-    function handleCheckbox2(event){
+    function handleCheckbox2(){
     if(regimenMenu2 == true){
       SetRegimenMenu2(!regimenMenu2)
       SetRegimenMenu("")
@@ -59,11 +59,11 @@ function CrearTablas() {
       SetRegimenMenu2(!regimenMenu2)
       SetRegimenMenu1(false)
       SetRegimenMenu3(false)
-      SetRegimenMenu(event.target.value)
+      SetRegimenMenu("vegetariano")
     }
   }
 
-  function handleCheckbox3(event){
+  function handleCheckbox3(){
     if(regimenMenu3 == true){
       SetRegimenMenu3(!regimenMenu3)
       SetRegimenMenu("")
@@ -71,11 +71,11 @@ function CrearTablas() {
       SetRegimenMenu3(!regimenMenu3)
       SetRegimenMenu1(false)
       SetRegimenMenu2(false)
-      SetRegimenMenu(event.target.value)
+      SetRegimenMenu("vegano")
     }
   }
 
-  function handleCheckbox4(event){
+  function handleCheckbox4(){
     if(alergenosMenu1 == true){
       SetAlergenosMenu1(!alergenosMenu1)
       SetAlergenosMenu("")
@@ -88,7 +88,7 @@ function CrearTablas() {
     }
   }
 
-  function handleCheckbox5(event){
+  function handleCheckbox5(){
     if(alergenosMenu2 == true){
       SetAlergenosMenu2(!alergenosMenu2)
       SetAlergenosMenu("")
@@ -101,7 +101,7 @@ function CrearTablas() {
     }
   }
 
-  function handleCheckbox6(event){
+  function handleCheckbox6(){
     if(alergenosMenu3 == true){
       SetAlergenosMenu3(!alergenosMenu3)
       SetAlergenosMenu("")
@@ -114,7 +114,7 @@ function CrearTablas() {
     }
   }
 
-  function handleCheckbox7(event){
+  function handleCheckbox7(){
     if(alergenosMenu4 == true){
       SetAlergenosMenu4(!alergenosMenu4)
       SetAlergenosMenu("")

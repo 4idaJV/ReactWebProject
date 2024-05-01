@@ -11,22 +11,19 @@ const Perfil = () => {
   const [crearRecetas,SetCrearRecetas] = useState([])
   const [crearRecetasFAV,SetCrearRecetasFAV] = useState([])
   const [nombreUser,SetnombreUser] = useState("")
-  //let token = localStorage.setItem("token")
- // let name =localStorage.setItem("nombre")
+
  let id = -1
  id = localStorage.getItem("id")
  let nombre = localStorage.getItem("name")
   
-  if(id == -1){
-    console.log("esperando")
-  }else {
+
     useEffect(() => {
       RecetasUsuario()
       SetnombreUser(nombre)
       getRecetasFavoritos()
     },[])
 
-  }  
+   
     async function RecetasUsuario() {
       const {recipeUsers} = await getRecetasUser(id)
       SetCrearRecetas(recipeUsers)

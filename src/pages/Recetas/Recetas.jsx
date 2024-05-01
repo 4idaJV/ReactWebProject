@@ -32,20 +32,15 @@ const Recetas = () => {
         </label>
         
     </div>
-        {recetas.map((recetas) => {
-      return <Filtrado key={recetas.id} recetas={recetas} SetId={SetId} ids={ids}/>
-      })}
-
     
     <div className='grid_recetas'>
-    
-      {/* {mostrarRecetas(recetas,comida)} */}
+       {mostrarRecetas(recetas,comida,SetId,ids)} 
     </div>
     </section>
   )
 }
-/*
-function mostrarRecetas(recetas,comida){
+
+function mostrarRecetas(recetas,comida,SetId,ids){
    
     if(recetas.length == 0){
         return <h1>Loading...</h1>
@@ -54,15 +49,9 @@ function mostrarRecetas(recetas,comida){
             <>
                 {recetas.filter((receta) => {
             return receta.menuSetTime == "desayuno"})
-            .map((receta) => { 
-            return(
-                <div className='recetas_Desayunos' key={receta.id}>
-                    <h2>{receta.title}</h2>
-                    <p>Tiempo de Elaboracion: {receta.cookingTime} </p>
-                    <img className='imagen_recetas' src={receta.img_url} alt="" />
-                    <p>ingredientes {receta.cookingTime} </p>
-                </div>
-            );
+            .map((recetas) => { 
+            return <Filtrado key={recetas.id} recetas={recetas} SetId={SetId} ids={ids}/>
+ 
         })}
             </>
             )
@@ -71,15 +60,8 @@ function mostrarRecetas(recetas,comida){
             <>
         {recetas.filter((receta) => {
             return receta.menuSetTime == "almuerzo"})
-            .map((receta) => { 
-                console.log('a')
-            return(
-                <div className='recetas_almuerzos' key={receta.id}>
-                    <h2>{receta.title}</h2>
-                    <p>Tiempo de Elaboracion: {receta.cookingTime} </p>
-                    <img className='imagen_recetas' src={receta.img_url} alt="" />
-                </div>
-            );
+            .map((recetas) => { 
+                return <Filtrado key={recetas.id} recetas={recetas} SetId={SetId} ids={ids}/>
         })}
         </>
         )
@@ -88,40 +70,20 @@ function mostrarRecetas(recetas,comida){
             <>
         {recetas.filter((receta) => {
             return receta.menuSetTime == "cena"})
-            .map((receta) => { 
-                console.log('a')
-            return(
-                <div className='recetas_cena' key={receta.id}>
-                    <h2>{receta.title}</h2>
-                    <p>Tiempo de Elaboracion: {receta.cookingTime} </p>
-                    <img className='imagen_recetas' src={receta.img_url} alt="" />
-                </div>
-            );
-        })}
+            .map((recetas) => {    
+                return <Filtrado key={recetas.id} recetas={recetas} SetId={SetId} ids={ids}/>
+            })}
         </>
         )
     }else if(recetas.length != 0 ){
         return(
             <>
-
-
-           
-                {/* {recetas.map((receta) => {
-                    return(
-                        <div className='recetas' key={receta.id}>
-                            <h2>{receta.title}</h2>asta
-                            <p>Tiempo de Elaboracion: {receta.cookingTime} </p>
-                            <img className='imagen_recetas' src={receta.img_url} alt="" />
-                            <p>ingredientes {receta.ingredients.map((ingredientes,i)=> {
-                                return <p key={i}>{ingredientes.name}</p>
-                            })} </p>
-                            <input type='checkbox' onClick={handleFav}>Favoritos</input>
-                        </div>
-                    );
-                })} }
+              {recetas.map((recetas) => {
+                    return <Filtrado key={recetas.id} recetas={recetas} SetId={SetId} ids={ids}/>
+                })} 
             </>
             )
-    }
+     }
 }
-*/
+
 export default Recetas

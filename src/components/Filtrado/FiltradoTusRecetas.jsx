@@ -3,6 +3,7 @@ import './Filtrado.css'
 function FiltradoTusRecetas({crearRecetas}) {
 
   function mapTusRecetas(){
+    console.log(crearRecetas.length)
     if(crearRecetas.length == 0){
       return(
         <>

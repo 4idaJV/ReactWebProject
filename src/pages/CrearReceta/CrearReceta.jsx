@@ -37,7 +37,7 @@ const CrearReceta = () => {
     <section className='CrearReceta'>
      <h1 className='titulo_CrearReceta'>Crear Receta</h1>
 
-      <form  className='FormularioRecetas'>
+      <form  className='FormularioRecetas' onSubmit={TodasRecetas}>
 
         <label className='labels_SignUp'>Nombre Receta </label>         
         <input type="text" className='input_SignUp' placeholder= "Tu Receta" value={titulo} onChange={(e) => SetTitulo(e.target.value)}/>
@@ -81,7 +81,7 @@ const CrearReceta = () => {
                 <option value="vegano">Vegano</option>
                 <option value="Omnivoro">Omnívoro</option>
         </select>    
-            <button onClick={TodasRecetas}  type="submit" className='SignUp_Button'>
+            <button type="submit" className='SignUp_Button'>
               Enviar receta
             </button>
       </form>

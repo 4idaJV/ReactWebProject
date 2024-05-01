@@ -8,10 +8,11 @@ function Filtrado({recetas,SetId,ids}) {
 
    async function handleFav(e){
       let cool = recetas.id
+      console.log(cool)
       SetId(cool)
-      console.log(nume)
-      console.log(ids)
-      const datos = {userId:nume,recipeId:recetas.id}
+      let datos = {
+        userId:nume,
+        recipeId:cool}
       await VincularUR(datos)
     }
      

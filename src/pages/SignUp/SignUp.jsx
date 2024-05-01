@@ -11,6 +11,7 @@ const SignForm = () => {
   const [isChecked, setIsChecked] = useState(false);
   const history = useNavigate();
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (
@@ -38,6 +39,7 @@ const SignForm = () => {
       alert("Rellena los campos de manera correcta");
     }
   };
+
   const checkboxClicked = () => {
     setIsChecked(true);
   };
@@ -45,24 +47,25 @@ const SignForm = () => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
+  function handlegoLogin(){
+    history('/login');
+  }
+
   return (
     <section className="container" id="container">
       <div className="imagen_signUp"></div>
 
       <div>
-        <div className="moverBoton">
-          <Link to="/Login">
-            {" "}
-            <button type="button" className="Login_Button">
+        {/* <div className="moverBoton">    
+            <button type="button" className="Login_Button" onClick={handlegoLogin}>
               Login
-            </button>
-          </Link>
-        </div>
+            </button> 
+        </div> */}
         
         <form onSubmit={handleSubmit} className="form_SignUp">
-        <div class="button-container">
-            <button class="login-button">Login</button>
-            <button class="signin-button">Sign Up</button>
+        <div className="button-container">
+            <button className="login-button" onClick={handlegoLogin}>Login </button>
+            <button className="signin-button">Sign Up</button>
           </div>
           <label className="labels_SignUp">FULL NAME </label>
           <input

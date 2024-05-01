@@ -12,7 +12,7 @@ const Logear = () => {
 
     const handleLogIn = async (e) => {
         e.preventDefault()
-        
+        console.log("hola")
         if(validatePassword() && validateEmail()){
             const user = {email:email, password:password}
             const logearUsuario = await logIn(user)
@@ -35,15 +35,22 @@ const Logear = () => {
     return /[a-z0-9]@gmail.com$/.test(email);
   };
 
+
+  function handleSignUp(){
+    history('/signup');
+}
+
   return (
     <section className='container' id="container">
          <div className='imagen_signUp2'>
         </div>
+
+
         <form className='form_LogIn' onSubmit={handleLogIn}>
-        <div class="button-container">
-            <button class="login-button">Login</button>
-            <button class="signin-button">Sign Up</button>
-          </div>
+            <div className="button-container">
+                <button className="login-button">Login</button>
+                <button className="signin-button" onClick={handleSignUp}>Sign Up</button>
+            </div>
 
             <label className='labels_SignUp'>E-MAIL </label>
             <input type="email" placeholder= "Enter you e-mail address" className='input_SignUp'  value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -55,6 +62,7 @@ const Logear = () => {
                 <input type="checkbox" className='check'/>
                 <label className='label_checkbox'> By signing you are agree Terms & Conditions</label>
             </div>
+
             <button type="submit" className='SignUp_Button'>
                 Log In
             </button>
