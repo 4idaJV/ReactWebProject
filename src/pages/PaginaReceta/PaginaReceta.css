@@ -1,25 +1,25 @@
 .PaginaRecetas{
     margin-top: 9vh;
+    width: 100%;
 }
 /*Grid Padre lo divide en arriba y abajo*/
 .GridOneRecipe{
     background-color: rgba(255, 255, 255, 0.935);
     display: grid;
+    width: 100%;
     grid-template-rows: repeat(2,50%);
     height: 140vh;
     row-gap: 2rem;
 }
 /*Grid Parte de Arriba*/
 .row1{
-    height: 100%;
-    width: 100%;
     display: grid;
     grid-template-columns: 60% 40%;
     background-color: rgba(233, 232, 225, 0.498);
 }
 /*Parte izquierda de arriba (Imagen)*/
 .ImagenRecetaOne{ 
-    width: 60vw;
+    width: 100%;
     height: 70vh; 
     background-size: cover;
     background-position: center;
@@ -27,18 +27,23 @@
 }
 /*Parte derecha de arriba*/
 .titleOneRecipe{
-    color: rgb(229, 168, 15);
-    font-size: 1.5rem;
+    color: rgb(240, 181, 31);
+    font-size: 2rem;
     text-align: center;
 }
 .FlexTiempos{
     display: grid;
     grid-template-columns: 50% 50%;
-    gap: 30px;
+    gap: 10px;
+}
+.P_recetas{
+    width: 100%;
 }
 
 .FlexRow1{
-    margin: 5vh 5vh;
+    width: 100%;
+    margin: 5vh 0;
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -48,7 +53,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: start;
     gap: 20px;
+}
+.IngredientesTitulo1{
+    color: rgba(34, 33, 30, 0.835);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: start;
+    margin-bottom: 35px;
 }
 .IngredientesTitulo{
     color: rgba(34, 33, 30, 0.835);
@@ -60,10 +73,12 @@
 .space{
     margin: 0  5vh 4vh ;
 }
-
+.MarginIngredients{
+    margin: 0 6vw;
+}
 .row2{
-    margin: 0  5vh;
-    width: 100vw;
+    text-align: center;
+    width: 100%;
     height: 60vh; 
     display: flex;
     flex-direction: column;

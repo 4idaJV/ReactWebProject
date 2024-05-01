@@ -16,15 +16,16 @@ function Filtrado({recetas,SetId,ids}) {
     }
      
   return (
-    <> 
+    <div className='centrarRecetas'> 
       <div className='recetas' key={recetas.id}>
-        <h2>{recetas.title}</h2>
-        <p>Tiempo de Elaboracion: {recetas.cookingTime} </p>
-        <img className='imagen_recetas' src={recetas.img_url} alt="" />
-        <button type='button' onClick={handleFav}>Favoritos</button>
-       <Link to={`/PaginaReceta/${cool}`}><button type='button'>Direcction</button></Link>
+        <img className='imagen_Recipe' src={recetas.img_url} alt="" />
+        <div>
+         <button type='button' onClick={handleFav} className='favDirecc'>Fav</button>
+         <Link to={`/PaginaReceta/${cool}`}><button type='button' className='favDirecc'>See</button></Link>
+        </div>
+        <h4>{recetas.title}</h4>
       </div>
-    </>
+    </div>
   )
 }
 
