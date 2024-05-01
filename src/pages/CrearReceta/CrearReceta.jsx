@@ -14,7 +14,7 @@ const CrearReceta = () => {
   const [alergenos,SetAlergenos] = useState("");
   const [regimen,SetRegimen] = useState("");
 
- let id = localStorage.getItem("id")
+  let id = localStorage.getItem("id")
 
   async function TodasRecetas(e) {
     const crearReceta = {
