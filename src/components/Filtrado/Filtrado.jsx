@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 
 
 function Filtrado({recetas,SetId,ids}) {
+  
     let nume = localStorage.getItem("id")
     let cool = recetas.id
   
@@ -20,10 +21,10 @@ function Filtrado({recetas,SetId,ids}) {
       <div className='recetas' key={recetas.id}>
         <img className='imagen_Recipe' src={recetas.img_url} alt="" />
         <div>
-         <button type='button' onClick={handleFav} className='favDirecc'>Fav</button>
-         <Link to={`/PaginaReceta/${cool}`}><button type='button' className='favDirecc'>See</button></Link>
+         <button type='button' onClick={handleFav} className='fav'>FAV</button>
+         <Link to={`/PaginaReceta/${cool}`}><button type='button' className='recc'>SEE</button></Link>
         </div>
-        <h4>{recetas.title}</h4>
+        <h4 className='tituloTargetas'>{recetas.title}</h4>
       </div>
     </div>
   )

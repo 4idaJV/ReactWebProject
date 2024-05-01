@@ -34,7 +34,7 @@
 .FlexTiempos{
     display: grid;
     grid-template-columns: 50% 50%;
-    gap: 10px;
+    row-gap: 50px;
 }
 .P_recetas{
     width: 100%;
@@ -61,7 +61,7 @@
     font-size: 1.5rem;
     font-weight: 800;
     text-align: start;
-    margin-bottom: 35px;
+    margin-bottom: 60px;
 }
 .IngredientesTitulo{
     color: rgba(34, 33, 30, 0.835);
@@ -87,4 +87,17 @@
 .pasosRecetas{
     margin-left: 2rem;
     font-size: 20px;
+}
+
+.flexdeTiempos{
+    display: flex;
+    justify-content: center;
+
+}
+.socialmediabotons1{
+    width: 15%;
+    display: flex;
+    justify-content: end;
+    margin-right: 7px;
+
 }

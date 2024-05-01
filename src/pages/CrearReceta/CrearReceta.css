@@ -75,16 +75,15 @@ input::placeholder{
 }
 
 .selectBoxes {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    
     
 }
 
 .individualSelectBox {
     display: flex;
     flex-direction: column;
-    margin: 0 183px;
     
 }
 
@@ -115,3 +114,4 @@ input::placeholder{
     box-shadow: 0px 4px 4px #00000040;
     margin-top: 70px;
 }
+

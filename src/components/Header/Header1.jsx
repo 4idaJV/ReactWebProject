@@ -57,7 +57,7 @@ const Header = () => {
             <img src="../public/imagenes/fuerza.png" alt="Log" />
           </button>
         </Link>
-        <Link to="/login">
+        <Link to="/Perfil">
           <button className="login">
             <img src="../public/imagenes/cuenta.png" alt="Log" />
           </button>
