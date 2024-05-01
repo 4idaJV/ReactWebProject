@@ -37,54 +37,63 @@ const CrearReceta = () => {
     <section className='CrearReceta'>
       <div className='coverOpacity'>
 
-          <form className='FormularioRecetas' onSubmit={TodasRecetas}>
-            <h1 className='titulo_CrearReceta'>Crear Receta</h1>
-            <label className='labels_SignUp'>Nombre Receta </label>
-            <input type="text" className='input_SignUp' placeholder="Tu Receta" value={titulo} onChange={(e) => SetTitulo(e.target.value)} />
+        <form className='FormularioRecetas' onSubmit={TodasRecetas}>
+          <p className='titulo_CrearReceta'>CREATE RECIPE</p>
+          <label className='labels_SignUp1'>NAME </label>
+          <input type="text" className='input_SignUp1' placeholder="Your Recipe Name" value={titulo} onChange={(e) => SetTitulo(e.target.value)} />
 
-            <label className='labels_SignUp'>Description</label>
-            <input type="text" className='input_SignUp' placeholder="" value={descript} onChange={(e) => SetDescript(e.target.value)} />
+          <label className='labels_SignUp1'>INGREDIENTS</label>
+          <input type="text" className='input_SignUp1' placeholder="Add All the Ingredients" value={descript} onChange={(e) => SetDescript(e.target.value)} />
 
-            <label className='labels_SignUp'>Instrucciones de preparado</label>
-            <input type="text" className='input_SignUp' placeholder="" value={instrucc} onChange={(e) => SetInstrucc(e.target.value)} />
+          <label className='labels_SignUp1'>INSTRUCTIONS</label>
+          <input type="text" className='input_SignUp1' placeholder="How to Prepare Your Recipe" value={instrucc} onChange={(e) => SetInstrucc(e.target.value)} />
 
-            <label className='labels_SignUp'>Tiempo de preparado</label>
-            <input type="number" className='input_SignUp' placeholder="" value={coockTime} onChange={(e) => SetCoockTime(e.target.value)} />
+          <label className='labels_SignUp1'>PREPARATION TIME</label>
+          <input type="number" className='input_SignUp1' placeholder="" value={coockTime} onChange={(e) => SetCoockTime(e.target.value)} />
 
-            <label className='labels_SignUp'>Añade tu imagen</label>
-            <input type="img" className='input_SignUp' placeholder="" value={img} onChange={(e) => SetImg(e.target.value)} />
+          <label className='labels_SignUp1'>ADD YOUR IMAGE</label>
+          <input type="img" className='input_SignUp1' placeholder="" value={img} onChange={(e) => SetImg(e.target.value)} />
 
-            <label className='labels_SignUp'>Cantidad de porciones</label>
-            <input type="number" className='input_SignUp' placeholder="" value={serv} onChange={(e) => SetServ(e.target.value)} />
+          <label className='labels_SignUp1'>SERVING SIZE</label>
+          <input type="number" className='input_SignUp1' placeholder="" value={serv} onChange={(e) => SetServ(e.target.value)} />
 
-            <label className='labels_SignUp'>Tipo de comida</label>
-            <select value={comida} onChange={(e) => SetComida(e.target.value)}>
-              <option value="1"></option>
-              <option value="desayuno">Desayuno</option>
-              <option value="almuerzo">Almuerzo</option>
-              <option value="cena">Cena</option>
-            </select>
+          <div className='selectBoxes'>
+            <div className='individualSelectBox'>
+              <label className='labels_SignUp1'>TYPE OF MEAL</label>
+              <select className="boxScroll" value={comida} onChange={(e) => SetComida(e.target.value)}>
+                <option value="1"></option>
+                <option value="desayuno">Breakfast</option>
+                <option value="almuerzo">Lunch</option>
+                <option value="cena">Dinner</option>
+              </select>
+            </div>
 
-            <label className='labels_SignUp'>Alérgenos</label>
-            <select value={alergenos} onChange={(e) => SetAlergenos(e.target.value)}>
-              <option value="1"></option>
-              <option value="lacteos">Lácteos</option>
-              <option value="gluten">Gluten</option>
-              <option value="huevo">Huevo</option>
-              <option value="frutoSecos">frutoSecos</option>
-            </select>
 
-            <label className='labels_SignUp'>Régimen</label>
-            <select value={regimen} onChange={(e) => SetRegimen(e.target.value)}>
-              <option value="1"></option>
-              <option value="vegetariano">Vegetariano</option>
-              <option value="vegano">Vegano</option>
-              <option value="Omnivoro">Omnívoro</option>
-            </select>
-            <button type="submit" className='SignUp_Button'>
-              Enviar receta
-            </button>
-          </form>
+            <div className='individualSelectBox'>
+              <label className='labels_SignUp1'>ALLERGENS</label>
+              <select className="boxScroll" value={alergenos} onChange={(e) => SetAlergenos(e.target.value)}>
+                <option value="1"></option>
+                <option value="lacteos">Dairy</option>
+                <option value="gluten">Gluten</option>
+                <option value="huevo">Egg</option>
+                <option value="frutoSecos">Nuts</option>
+              </select>
+            </div>
+
+            <div className='individualSelectBox'>
+              <label className='labels_SignUp1'>TYPE OF DIET</label>
+              <select className="boxScroll" value={regimen} onChange={(e) => SetRegimen(e.target.value)}>
+                <option value="1"></option>
+                <option value="vegetariano">Vegetarian</option>
+                <option value="vegano">Vegan</option>
+                <option value="Omnivoro">Omnivore</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" className='SignUp_ButtonCrearRecetas'>
+            Create Recipe
+          </button>
+        </form>
       </div>
     </section>
   )

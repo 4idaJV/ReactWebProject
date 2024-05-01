@@ -35,12 +35,12 @@ const Header = () => {
 
         <div className="nav-list">
           <Link to="/recetas">
-            <p>RECIPIES</p>
+            <p>RECIPES</p>
           </Link>
 
-          <Link to="/Perfil">
+          {/* <Link to="/Perfil">
             <p>PROFILE</p>
-          </Link>
+          </Link> */}
 
           <Link to="/CrearReceta">
             <p>CREATE RECIPE</p>

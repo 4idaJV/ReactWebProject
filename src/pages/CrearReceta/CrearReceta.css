@@ -1,27 +1,117 @@
 .CrearReceta {
-    margin-top: 8vh;
-    height: 100%;
+    margin-top: 9vh;
     background-image: url(../../../public/imagenes/pexels-katerina-holmes-5907574.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    padding-bottom: 20rem;
+    z-index: 1;
     position: relative;
-    z-index: 1; 
 }
 
+.CrearReceta::before {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+
+
+}
 
 .FormularioRecetas {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
     gap: 10px;
     align-items: center;
-    margin: 5% 10%;
+    margin: 0 15vw;
+    margin-top: 5vh;
     background-color: white;
-    
+    padding: 4vh 3vw;
+    border-radius: 20px;
 }
 
 .titulo_CrearReceta {
-    margin-top: 2rem;
+    font-family: 'Montserrat-Bold', sans-serif;
     text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #545454;
+}
+
+.input_SignUp1 {
+    left: 0;
+    line-height: normal;
+    white-space: nowrap;
+    font-weight: 900;
+    width: 100%;
+    padding: 5px;
+    color: #AEAEAE;
+    border: none;
+    border-bottom: 2px solid #00000037;
+    font-size: 1rem;
+    font-family: 'Montserrat-Bold', sans-serif;
+}
+input::placeholder{
+    color: #AEAEAE;
+}
+
+.labels_SignUp1 {
+    display: flex;
+    width: 100%;
+    font-size: 18px;
+    left: 0;
+    color: rgb(84, 84, 84);
+    margin-top: 40px;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 900;
+
+
+}
+
+.selectBoxes {
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+
+.individualSelectBox {
+    display: flex;
+    flex-direction: column;
+    margin: 0 183px;
+    
+}
+
+.boxScroll {
+    margin-top: 10px;
+    height: 25px;
+    width: 250px;
+    background-color: white;
+    border: none;
+    border-bottom: 2px solid #00000037;
+    font-size: 1rem;
+    color: #AEAEAE;
+    font-weight: 900;
+    font-family: 'Montserrat-Bold', sans-serif;
+    
+}
+
+.SignUp_ButtonCrearRecetas {
+    background-color: #fcc948;
+    border-radius: 50px;
+    padding: 10px 23px;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Montserrat-Bold', sans-serif;
+    color: white;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 4px 4px #00000040;
+    margin-top: 70px;
 }
