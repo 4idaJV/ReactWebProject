@@ -50,8 +50,9 @@ function mostrarRecetas(recetas,comida,SetId,ids){
                 {recetas.filter((receta) => {
             return receta.menuSetTime == "desayuno"})
             .map((recetas) => { 
-            return <Filtrado key={recetas.id} recetas={recetas} SetId={SetId} ids={ids}/>
- 
+            return(
+            <Filtrado key={recetas.id} recetas={recetas} SetId={SetId} ids={ids}/>
+            )
         })}
             </>
             )
@@ -71,7 +72,7 @@ function mostrarRecetas(recetas,comida,SetId,ids){
         {recetas.filter((receta) => {
             return receta.menuSetTime == "cena"})
             .map((recetas) => {    
-                return <Filtrado key={recetas.id} recetas={recetas} SetId={SetId} ids={ids}/>
+                return <Filtrado  key={recetas.id} recetas={recetas} SetId={SetId} ids={ids}/>
             })}
         </>
         )

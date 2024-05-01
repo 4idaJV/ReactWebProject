@@ -25,8 +25,6 @@ function FiltradoTusRecetasFav({crearRecetasFAV}) {
         )
     }
   }
-
-
   return (
     <section className='misRecetas'>
     {mapTusRecetas()} 
