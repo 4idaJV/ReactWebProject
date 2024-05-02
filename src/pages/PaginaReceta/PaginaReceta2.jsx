@@ -1,23 +1,23 @@
 import './PaginaReceta.css'
 import { useParams } from 'react-router-dom'
 import {useState,useEffect} from 'react'
-import {getOneRecipe} from '../../services/getOneRecipe.js'
+import { getOneRecipeUser } from '../../services/getOneRecipeUser.js'
 
-
-const PaginaReceta = () => {
+const PaginaReceta2 = () => {
     const recipeId = useParams()
     const [recetas,SetRecetas] = useState("")
+    console.log(recetas)
   
     useEffect(()=> {
-        OneRecetas()
+        OneRecetasUser()
       },[])
-    
-       async function OneRecetas() {
-         const data = await getOneRecipe(recipeId.recipeId)
-         SetRecetas(data)
-       }
+   
 
-      
+        async function OneRecetasUser() {
+          const data = await getOneRecipeUser(recipeId.recipeId)
+          SetRecetas(data)
+        }
+
       function TraerIgredi(){
         if(recetas.ingredients == undefined ||recetas.ingredients.length == []){
           return(
@@ -100,4 +100,4 @@ const PaginaReceta = () => {
   )
 }
 
-export default PaginaReceta
+export default PaginaReceta2

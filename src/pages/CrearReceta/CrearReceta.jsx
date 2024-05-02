@@ -9,6 +9,8 @@ const CrearReceta = () => {
   const [descript, SetDescript] = useState("")
   const [instrucc, SetInstrucc] = useState("");
   const [coockTime, SetCoockTime] = useState(0)
+  const [prepTime, SetPreTime] = useState(0)
+
   const [serv, SetServ] = useState(0);
   const [img, SetImg] = useState("");
   const [comida, SetComida] = useState("");
@@ -28,6 +30,7 @@ const CrearReceta = () => {
       title: titulo,
       description: descript,
       instructions: instrucc,
+      preparationTime:prepTime,
       coockingTime: coockTime,
       servingSize: serv,
       menuSetTime: comida,
@@ -69,7 +72,7 @@ const CrearReceta = () => {
           <input type="text" className='input_SignUp1' placeholder="How to Prepare Your Recipe" value={instrucc} onChange={(e) => SetInstrucc(e.target.value)} />
 
           <label className='labels_SignUp1'>PREPARATION TIME</label>
-          <input type="number" className='input_SignUp1' placeholder="" value={coockTime} onChange={(e) => SetCoockTime(e.target.value)} />
+          <input type="number" className='input_SignUp1' placeholder="" value={prepTime} onChange={(e) => SetPreTime(e.target.value)} />
 
           <label className='labels_SignUp1'>ADD YOUR IMAGE</label>
           <input type="img" className='input_SignUp1' placeholder="" value={img} onChange={(e) => SetImg(e.target.value)} />

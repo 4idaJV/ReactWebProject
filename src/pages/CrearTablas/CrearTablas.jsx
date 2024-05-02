@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import FiltradoDesayuno from "../../components/Filtrado/FiltradoDesayuno.jsx";
 import FiltradoAlmuerzo from "../../components/Filtrado/FiltradoAlmuerzo.jsx";
 import FiltradoCena from "../../components/Filtrado/FiltradoCena.jsx";
-import eggImg from "../../../public/imagenes/eggs_702559.png";
+
 
 function CrearTablas() {
   const [recetas, SetRecetas] = useState([]);
@@ -35,7 +35,7 @@ function CrearTablas() {
     SetRecetas(data)
   }
 
-  function handleclick1(e) {
+  function handleclick1() {
     SetBollean(true)
     setActu(true)
   }
@@ -182,13 +182,13 @@ function CrearTablas() {
           <h1 className='titulosCrearTablas'>Do you have any allergies or food intolerances?</h1>
           <section className=''>
             <div className='alergias'>
-              <div className='agree'>
-                c
+
+              <div className='agree'>  
                 <label className='label_checkbox'>
                 <span className="checkbox-custom"></span>
-                  Eggs</label>
-                
+                  Eggs</label> 
               </div>
+
               <div className='agree'>
                 <input type="checkbox" className='check' checked={alergenosMenu2} onChange={handleCheckbox5} />
                 <label className='label_checkbox'>Gluten</label>

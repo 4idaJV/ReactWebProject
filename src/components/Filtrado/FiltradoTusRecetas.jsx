@@ -1,8 +1,9 @@
 import './Filtrado.css'
+import {Link} from 'react-router-dom'
 
-function FiltradoTusRecetas({crearRecetas}) {
+function FiltradoTusRecetas({crearRecetas,receta}) {
+  let cool = receta.id
 
-  function mapTusRecetas(){
     if(crearRecetas.length == 0){
       return(
         <>
@@ -10,19 +11,17 @@ function FiltradoTusRecetas({crearRecetas}) {
         </>
       )
     } else if(crearRecetas) {
+      //console.log(crearRecetas)
         return(
           <>
-          {crearRecetas.map((receta) => {
-              return(
-                  <div className='recetasCreadas' key={receta.id}>
+                <div className='recetasCreadas' key={receta.id}>
                       <img src={receta.img_url} className='imagen_recetas'  alt="" />
                       <p className='RecetaTitulo'>{receta.title}</p>
+                      <Link to={`/PaginaReceta2/${cool}`}><button type='button' className='recc'>SEE</button></Link>
                   </div>
-              );
-          })} 
           </>
         )
-    }
+
   }
 
 
