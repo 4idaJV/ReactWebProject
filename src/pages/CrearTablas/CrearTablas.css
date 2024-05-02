@@ -29,11 +29,12 @@
     height: 100%;
     gap: 10px;
     align-items: center;
-    margin: 0 15vw;
+    margin: 0 27vw;
     margin-top: 5vh;
     border-radius: 20px;
     background-color: white;
-    padding: 4vh 3vw;
+    padding: 5vh 3vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .alergias {
@@ -41,6 +42,7 @@
     flex-wrap: wrap; /* Ajustar el wrap para que los elementos fluyan a la siguiente fila */
     justify-content: space-between; /* Distribuir los elementos uniformemente en el contenedor */
     gap: 20px; /* Espacio entre las columnas */
+    margin-bottom: 40px;
 }
 
 /* Se encarga de modificar los enunciados de cada seccion */
@@ -50,6 +52,7 @@
     font-size: 2rem;
     font-weight: 900;
     color: #545454;
+    
 }
 
 .regimenTitle {
@@ -59,14 +62,28 @@
     font-size: 1.4rem;
     margin-bottom: 0.3rem;
 }
+.regimen{
+    margin-bottom: 20px;
+}
 
 .label_CrearTabla {}
 
-h2 {
+
+.avisoParagraph{
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 900;
+    color: #AEAEAE;
+    font-size: 1em;
+}
+.avisoTitulo{
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 900;
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
     font-weight: bolder;
+    color: #545454;
+    font-size: 1.2em;
 }
 
 .buttonGetMenu {
@@ -109,6 +126,33 @@ h2 {
     margin-right: 40px; /* Espacio entre cada palabra de alérgenos */
 }
 
+.box-Meals{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #F5F1F1;
+    margin-left: 60px;
+    margin-right: 60px;
+    gap: 40px ;
+
+    justify-content:space-between;
+}
+
+
+.individualBoxMeals{
+    width:550px;
+    height: 100%;
+    border: 2px solid black;
+    margin-bottom: 2rem;
+}
+.imgSizeBoxes{
+    width: 545px;
+    height: 300px;
+}
+
+.box-MealsBreakfast{
+    display: flex;
+    Width:50px;
+}
 
 
 

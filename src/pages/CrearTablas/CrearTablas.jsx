@@ -130,8 +130,8 @@ function CrearTablas() {
   function handleClick() {
     if (boolean == true) {
       return (
-        <div>
-          <div>
+        <div className="box-Meals">
+          <div className="box-MealsBreakfast">
             <FiltradoDesayuno
               recetas={recetas}
               regimenMenu={regimenMenu}
@@ -140,7 +140,7 @@ function CrearTablas() {
               setActu={setActu}
             />
           </div>
-          <div>
+          <div className="box-MealsBreakfast">
             <FiltradoAlmuerzo
               recetas={recetas}
               regimenMenu={regimenMenu}
@@ -149,7 +149,7 @@ function CrearTablas() {
               setActu={setActu}
             />
           </div>
-          <div>
+          <div className="box-MealsBreakfast">
             <FiltradoCena
               recetas={recetas}
               regimenMenu={regimenMenu}
@@ -288,15 +288,15 @@ function CrearTablas() {
 
           
           <section className="aviso">
-            <h2>Important announcement</h2>
-            <p>
+            <h2 className="avisoTitulo">Important announcement</h2>
+            <p className="avisoParagraph">
               Our advice has been reviewed by nutrition experts and They are
               intended for guidance only. If you suffer from a serious food
               allergy, we recommend that you always consult Talk to your doctor
               before trying any of our recipes.
             </p>
             <br />
-            <p>
+            <p className="avisoParagraph">
               We use this data to determine your needs nutritional information
               and provide you with suggestions tailored to you.
             </p>

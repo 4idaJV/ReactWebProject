@@ -65,13 +65,25 @@ const FiltradoAlmuerzo = ({recetas,regimenMenu,alergenosMenu,actu,setActu}) => {
             return (
                  <div className="desayuno">
                      <h1 className='tituloComidas'>Almuerzo</h1>
-                   <p>{breakf[numero].title}</p>
-                  <p>Porciones:{breakf[numero].servingSize}</p>
-                   <p>Instruciones :{breakf[numero].instructions}</p>
-                  <img src={breakf[numero].img_url} alt="" />
-                  <p>Ingredientes : {breakf[numero].ingredients.map((ingredientes,i)=> {
+                     <div className="individualBoxMeals">
+                   
+                  
+                  <img className='imgSizeBoxes' src={breakf[numero].img_url} alt="" />
+                 {/*  <p>Ingredientes : {breakf[numero].ingredients.map((ingredientes,i)=> {
                         return <h3 key={i}>{ingredientes.name}</h3> 
-                    })}</p>
+                    })}</p> */}
+
+                    <div className="ajustarText">
+                    <p>{breakf[numero].title}</p>
+                        <p><span className="negrita">Servings:</span> {breakf[numero].servingSize}</p>
+                            <br/>
+                            <p><span className="negrita">Instrucctions:</span> {breakf[numero].instructions}</p>
+                            <p><span className="negrita">Type of Diet :</span>{breakf[numero].regimen}</p>
+                    <div>
+                    
+                    </div>
+                    </div>
+                    </div>
                  </div>
             )    
         }

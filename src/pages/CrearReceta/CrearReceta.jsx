@@ -71,11 +71,12 @@ const CrearReceta = () => {
           <label className='labels_SignUp1'>PREPARATION TIME</label>
           <input type="number" className='input_SignUp1' placeholder="" value={coockTime} onChange={(e) => SetCoockTime(e.target.value)} />
 
-          <label className='labels_SignUp1'>ADD YOUR IMAGE</label>
+          <label className='labels_SignUp1'>COOKING TIME</label>
           <input type="img" className='input_SignUp1' placeholder="" value={img} onChange={(e) => SetImg(e.target.value)} />
-          <div>
-             <input  type='file' accept='image/*' className='input_SignUp2' onChange={ChangeUploadImage} />
-          </div>
+        
+          <label className='labels_SignUp1'>ADD IMAGE</label>
+          <input  type='file' accept='image/*' className='input_SignUp2' onChange={ChangeUploadImage} />
+         
          
 
           <label className='labels_SignUp1'>SERVING SIZE</label>
