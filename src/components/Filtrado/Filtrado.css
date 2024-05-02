@@ -1,7 +1,7 @@
 .recetas{
-    width:500px;
-    height:470px;
-    display: flex;
+    width:400px;
+    height:350px;
+    /* display: flex; */
     flex-direction:column;
     text-align:start;
     background-color:white ;
@@ -11,11 +11,27 @@
 .imagen_Recipe{
     display: flex;
     margin: 0;
-    width:500px;
-    height:350px;
+    width:400px;
+    height:250px;
     border-radius: 20px 20px 0px 0px;
     background-size: cover;
     padding-bottom: 1rem;
+}
+
+.buttonPosition1{
+        /* display: flex;
+        justify-content: end;
+        align-items: end; */
+        margin-bottom: 20px;
+        margin-right: 15px;
+}
+
+.buttonPosition2{
+    /* display: flex;
+        justify-content: end;
+        align-items: end; */
+        margin-bottom: 20px;
+        margin-right: 15px;
 }
 
 .PhotoBox{
@@ -34,7 +50,7 @@
 }
 
 .fav{
-  width: 10%;
+  width: 20%;
   border-radius: 20px;
   background-color: rgb(238, 205, 39);
   cursor: pointer;
@@ -64,7 +80,7 @@
 
 
 /*Esto No*/
-.imagen_recetas{
+/* .imagen_recetas{
     display: flex;
     margin: 0 auto;
     width:180px;
@@ -78,4 +94,4 @@
     flex-direction: column;
     margin: 0 40%;
     gap:10px;
-}
+} */
