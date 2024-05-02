@@ -12,15 +12,14 @@ const CrearReceta = () => {
   const [prepTime, SetPreTime] = useState(0)
 
   const [serv, SetServ] = useState(0);
-  const [img, SetImg] = useState("");
   const [comida, SetComida] = useState("");
   const [alergenos, SetAlergenos] = useState("");
   const [regimen, SetRegimen] = useState("");
   const [Url_Imagen,SetUrl_Imagen] = useState("")
-  const navigate = useNavigate()
   let tokens = localStorage.getItem("token")
   let id = localStorage.getItem("id")
 
+  
   async function TodasRecetas(e) {
 
     if (!tokens) {
@@ -75,26 +74,23 @@ const CrearReceta = () => {
           <input type="number" className='input_SignUp1' placeholder="" value={prepTime} onChange={(e) => SetPreTime(e.target.value)} />
 
           <label className='labels_SignUp1'>COOKING TIME</label>
-          <input type="img" className='input_SignUp1' placeholder="" value={img} onChange={(e) => SetImg(e.target.value)} />
+          <input type="number" className='input_SignUp1' placeholder="" value={coockTime} onChange={(e) => SetCoockTime(e.target.value)} />
         
           <label className='labels_SignUp1'>ADD IMAGE</label>
           <input  type='file' accept='image/*' className='input_SignUp2' onChange={ChangeUploadImage} />
          
-         
-
           <label className='labels_SignUp1'>SERVING SIZE</label>
           <input type="number" className='input_SignUp1 ' placeholder="" value={serv} onChange={(e) => SetServ(e.target.value)} />
 
-
-        
+    
           <div className='selectBoxes'>
             <div className='individualSelectBox'>
               <label className='labels_SignUp1'>TYPE OF MEAL</label>
               <select className="boxScroll" value={comida} onChange={(e) => SetComida(e.target.value)}>
                 <option value="1"></option>
-                <option value="desayuno">Breakfast</option>
-                <option value="almuerzo">Lunch</option>
-                <option value="cena">Dinner</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
               </select>
             </div>
 

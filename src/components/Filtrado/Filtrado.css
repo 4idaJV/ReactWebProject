@@ -91,16 +91,6 @@
     gap:10px;
 }
 
-<<<<<<< HEAD
-.negrita{
-    font-weight: 700;
-    font-size: 20px;
-}
-
-
-/*Esto No*/
-.imagen_recetas{
-=======
 .see{
     background-color: rgb(230, 200, 46);
     border-radius: 10px;
@@ -110,7 +100,6 @@
 
 
  .imagen_recetas{
->>>>>>> f26651790914890864aaf51b67981f2a4115dc7f
     display: flex;
     margin: 0 auto;
     width:180px;

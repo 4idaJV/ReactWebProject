@@ -24,7 +24,7 @@ const Perfil = () => {
       SetnombreUser(nombre)
       getRecetasFavoritos()
     },[])
-
+    45
    
     async function RecetasUsuario() {
       const {recipeUsers} = await getRecetasUser(id)
