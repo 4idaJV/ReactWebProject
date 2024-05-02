@@ -40,15 +40,15 @@ const Home = () => {
               src="https://img.freepik.com/free-vector/eating-variety-foods-concept-illustration_114360-11295.jpg"
               alt=""
             />
-           {/* <div className='caja-boton'>
+            {/* <div className='caja-boton'>
               <button className='circleButton'>
             <p className='numero'>1</p>
               </button>  */}
-              <h1 className="subtitulo">Create Your Menu</h1>
+            <h1 className="subtitulo">Create Your Menu</h1>
             {/*  </div>  */}
             <p className='parrafo'>
-            We craft exciting menus packed with a wide variety 
-            of recipes that perfectly fit your needs.
+              We craft exciting menus packed with a wide variety
+              of recipes that perfectly fit your needs.
             </p>
           </div>
           <div className="caja">
@@ -60,11 +60,11 @@ const Home = () => {
               <button className='circleButton'>
                 2
               </button> */}
-              <h1 className="subtitulo">Cook</h1>
+            <h1 className="subtitulo">Cook</h1>
             {/* </div> */}
             <p className='parrafo' >
-            Our recipes are designed to be affordable and accessible 
-            to everyone, offering great value that fits your budget.
+              Our recipes are designed to be affordable and accessible
+              to everyone, offering great value that fits your budget.
             </p>
           </div>
           <div className="caja">
@@ -74,9 +74,9 @@ const Home = () => {
             />
             {/* <div className='caja-boton'>
               <button className='circleButton'>3</button> */}
-              <h1 className="subtitulo">
-                Savor</h1>
-           {/*  </div> */}
+            <h1 className="subtitulo">
+              Savor</h1>
+            {/*  </div> */}
             <p className='parrafo'>
               We tailor our recipes to fit your skills in cooking and your busy
               lifestyle, ensuring a satisfying and accessible culinary experience
@@ -133,7 +133,7 @@ const Home = () => {
             </div>
           </div>
           <div className='eachRecipeBox'>
-          <div className='photoRecentRecipes2'>
+            <div className='photoRecentRecipes2'>
             </div>
             <div className='gridtextButton'>
               <div className='textRecentRecipe'>
@@ -145,7 +145,7 @@ const Home = () => {
             </div>
           </div>
           <div className='eachRecipeBox'>
-          <div className='photoRecentRecipes3'>
+            <div className='photoRecentRecipes3'>
             </div>
             <div className='gridtextButton'>
               <div className='textRecentRecipe'>
@@ -157,7 +157,7 @@ const Home = () => {
             </div>
           </div>
           <div className='eachRecipeBox'>
-          <div className='photoRecentRecipes4'>
+            <div className='photoRecentRecipes4'>
             </div>
             <div className='gridtextButton'>
               <div className='textRecentRecipe'>

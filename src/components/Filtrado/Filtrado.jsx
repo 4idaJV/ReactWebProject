@@ -26,8 +26,12 @@ function Filtrado({ recetas, SetId, ids }) {
           <h4 className='tituloTargetas'>{recetas.title}</h4>
         </div>
         <div className='botonesPlaced'>
-          <button type='button' onClick={handleFav} className='fav'>FAV</button>
-          <Link to={`/PaginaReceta/${cool}`}><button type='button' className='recc'>SEE</button></Link>
+          <div className='buttonPosition1'>
+            <button type='button' onClick={handleFav} className='fav'>+</button>
+          </div>
+          <div className='buttonPosition2'>
+            <Link to={`/PaginaReceta/${cool}`}><button type='button' className='recc'>SEE</button></Link>
+          </div>
         </div>
 
       </div>

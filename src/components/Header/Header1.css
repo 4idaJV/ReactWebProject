@@ -72,7 +72,7 @@
     color: #ffffff; 
     font-family: 'Montserrat-Bold', sans-serif;
     font-weight: 900;
-    font-size: 1.1rem; 
+    font-size: 1rem; 
     border: none; 
     white-space: nowrap;
     cursor: pointer;
@@ -94,7 +94,7 @@
     color: #ffffff; 
     font-family: 'Montserrat-Bold', sans-serif;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
     list-style: none;
 }
 

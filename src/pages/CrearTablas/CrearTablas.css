@@ -22,28 +22,29 @@
 }
 
 /* Es el que da styles global al fomulario y añade un fondo blanco transparente */
-.formularioCrearTablas{
+.formularioCrearTablas {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    gap:10px;
+    gap: 10px;
     align-items: center;
     margin: 0 15vw;
-    margin-top: 5vh ;
+    margin-top: 5vh;
     border-radius: 20px;
     background-color: white;
     padding: 4vh 3vw;
 }
 
-.alergias{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    gap: 40px;
+.alergias {
+    display: flex;
+    flex-wrap: wrap; /* Ajustar el wrap para que los elementos fluyan a la siguiente fila */
+    justify-content: space-between; /* Distribuir los elementos uniformemente en el contenedor */
+    gap: 20px; /* Espacio entre las columnas */
 }
 
 /* Se encarga de modificar los enunciados de cada seccion */
-.titulosCrearTablas{
+.titulosCrearTablas {
     font-family: 'Montserrat-Bold', sans-serif;
     text-align: center;
     font-size: 2rem;
@@ -51,55 +52,50 @@
     color: #545454;
 }
 
-.regimenTitle{
+.regimenTitle {
     font-family: 'Montserrat-Bold', sans-serif;
     font-weight: 900;
     color: #545454;
     font-size: 1.4rem;
     margin-bottom: 0.3rem;
 }
- .imagenes{
-    width: 30px;
- }
-.label_CrearTabla{
-    }
 
- h2{
+.label_CrearTabla {}
+
+h2 {
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
     font-weight: bolder;
- }
+}
 
- .buttonGetMenu{
+.buttonGetMenu {
     margin-bottom: 20px;
- }
- 
- .aviso{
-    margin: 15px;;
- }
+}
 
- .tituloscategorias{
+.aviso {
+    margin: 15px;
+}
+
+.tituloscategorias {
     color: rgb(10, 10, 10);
     font-weight: bold;
- }
- .iconAlergic {
-     width: 40px;
-     height: 40px; 
- }
+}
 
- .alergias {
-    display: flex;
-    flex-direction: column;
+.iconAlergic {
+    width: 40px;
+    height: 40px;
 }
 
 .fila {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px; /* Espacio entre las filas */
+    margin-bottom: 30px; /* Espacio entre las filas */
 }
 
 .agree {
+    flex-basis: calc(20% - 10px); /* Define el tamaño de cada elemento al 50% del contenedor con un margen de 10px */
+    margin-bottom: 20px; /* Añade un espacio entre los elementos */
     display: flex;
     align-items: center;
     padding: 1rem;
@@ -107,8 +103,32 @@
     font-weight: 900;
     color: #AEAEAE;
     border-bottom: 2px solid #AEAEAE;
-    margin-bottom: 10px;
 }
+
+.agree .label_checkbox {
+    margin-right: 40px; /* Espacio entre cada palabra de alérgenos */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .label_checkbox {
     margin-left: 2px; /* Espacio entre el icono y el texto */
@@ -121,22 +141,23 @@
     align-items: center;
 
 }
-.checkbox-custom{
+.checkbox-custom {
     background-image: url('../../../public/imagenes/eggs_702559.png');
-    width:20px;
+    width: 20px;
     height: 20px;
-    background-size:cover ;
-    transition: all 0.3s; 
+    background-size: cover;
+    transition: all 0.3s;
     margin-right: 5px;
-
+    display: inline-block; /* Añade esta línea para que el elemento se comporte correctamente */
 }
 
-.label_checkbox:checked + .checkbox-custom{
-    background-image: url('../../../public/imagenes/eggs_837560.png');
+/* Estilo para cuando el checkbox está seleccionado */
+#eggsCheckbox:checked + .label_checkbox .checkbox-custom {
+    background-image: url('../../../public/imagenes/egg_837560.png');
 }
 
-.check{
-    display:none; /* Oculta el checkbox real */
+.check {
+    display: none; /* Oculta el checkbox real */
 }
 
 
@@ -156,3 +177,60 @@
 .flextablas123{
     display: flex;
 }
+
+#glutenCheckbox:checked + .label_checkbox .checkbox-custom2 {
+    /* Estilos para cuando se selecciona el checkbox de gluten */
+    background-image: url('../../../public/imagenes/gluten_1497034.png');
+}
+.checkbox-custom2 {
+    background-image: url('../../../public/imagenes/gluten_1496983.png');
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    transition: all 0.3s;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+#nutsCheckbox:checked + .label_checkbox .checkbox-custom3 {
+    /* Estilos para cuando se selecciona el checkbox de nuts */
+    background-image: url('../../../public/imagenes/almond_3988277.png');
+}
+.checkbox-custom3 {
+    background-image: url('../../../public/imagenes/almond_3988178.png');
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    transition: all 0.3s;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+
+
+
+
+#lactoseCheckbox:checked + .label_checkbox .checkbox-custom4 {
+    /* Estilos para cuando se selecciona el checkbox de lactose */
+    background-image: url('../../../public/imagenes/milk_5125512.png');
+}
+
+.checkbox-custom4 {
+    background-image: url('../../../public/imagenes/milk_5125413.png');
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    transition: all 0.3s;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+
