@@ -37,7 +37,7 @@ const Perfil = () => {
 }
 
 
-  function handleLogOut(e){
+  function handleLogOut(){
     localStorage.clear();
     navegate("/");
   }
@@ -54,7 +54,29 @@ const Perfil = () => {
    SetUrl_Imagen(response.data.secure_url)
   }
 
-  console.log(crearRecetasFAV)
+
+
+  function handleTuRecetas(){
+    if(crearRecetas.length == []){
+      return(
+        <p>
+         espera
+        </p>
+      )
+    } else {
+      return(
+      <>
+      { 
+        crearRecetas.map((receta,i)=> {
+          return <FiltradoTusRecetas key={i} crearRecetas={crearRecetas} receta={receta} />
+        })}
+      </>
+
+      )
+    }
+  }
+
+  //console.log(crearRecetas)
 
   return (
     <section className='TuPerfil'>
@@ -109,17 +131,14 @@ const Perfil = () => {
             <span className='textousuario'>{nombreUser}</span></h1>
           </div>
 
-          {/* <div className='iconos' >
-            <p>iconos</p>
-          </div> */}
 
           <div className='MisPlatos'>
 
-            <div className='ContenedorRecetasUsuario'>
+            {/* <div className='ContenedorRecetasUsuario'>
               <h3 className='tituloCont'>My Saved Menus</h3>
-              <FiltradoTusRecetas crearRecetas={crearRecetas}/>
+              {/* <FiltradoTusRecetas crearRecetas={crearRecetas}/> 
               <div className='borderyellow '></div>
-            </div>
+            </div>  */}
 
             <div className='ContenedorRecetasUsuario'>
               <h3 className='tituloCont'>My Saved Recipes</h3>
@@ -129,14 +148,15 @@ const Perfil = () => {
 
             <div className='ContenedorRecetasUsuario'>
               <h3 className='tituloCont'>My Created Recipes</h3>
-              <FiltradoTusRecetas crearRecetas={crearRecetas} />
+              <div className='misRecetas'>
+                  {handleTuRecetas()}  
+              </div>
+                
               <div className='borderyellow '></div>
             </div>
-
           </div>
 
       </div>
-
     </section>
   )
 }

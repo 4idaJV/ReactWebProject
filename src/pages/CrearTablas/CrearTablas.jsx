@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import FiltradoDesayuno from "../../components/Filtrado/FiltradoDesayuno.jsx";
 import FiltradoAlmuerzo from "../../components/Filtrado/FiltradoAlmuerzo.jsx";
 import FiltradoCena from "../../components/Filtrado/FiltradoCena.jsx";
-import eggImg from "../../../public/imagenes/eggs_702559.png";
+
 
 function CrearTablas() {
   const [recetas, SetRecetas] = useState([]);
@@ -35,7 +35,7 @@ function CrearTablas() {
     SetRecetas(data);
   }
 
-  function handleclick1(e) {
+  function handleclick1() {
     SetBollean(true);
     setActu(true);
   }

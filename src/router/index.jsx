@@ -9,7 +9,8 @@ import Recetas from '../pages/Recetas/Recetas.jsx'
 import NotFound from '../pages/NotFound/NotFound.jsx'
 import CrearReceta from '../pages/CrearReceta/CrearReceta.jsx'
 import PaginaReceta from '../pages/PaginaReceta/PaginaReceta.jsx'
-const token = localStorage.getItem("token")
+import PaginaReceta2 from '../pages/PaginaReceta/PaginaReceta2.jsx'
+
 
 
 const router = createBrowserRouter([
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
         {
           path: '/PaginaReceta/:recipeId',
           element: <PaginaReceta />
+        },
+        {
+          path: '/PaginaReceta2/:recipeId',
+          element: <PaginaReceta2 />
         },
 
       ]

@@ -12,7 +12,7 @@ const Header = () => {
     SetTokens(token);
   });
 
-  function handleClick(e) {
+  function handleClick() {
     if (!tokens) {
       alert("Registrate para acceder a tu menu");
       navegate("/login");
@@ -21,7 +21,7 @@ const Header = () => {
     }
   }
 
-  function handlePerfil(e) {
+  function handlePerfil() {
     if (!tokens) {
       alert("Registrate para acceder a tu menu");
       navegate("/login");
@@ -61,9 +61,9 @@ const Header = () => {
         </button>
         <div className="login">
 
-          <button className="login">
+          <Link to="/login"><button className="login">
             <img src="../public/imagenes/fuerza.png" alt="Log" />
-          </button>
+          </button></Link>
         
           <button className="login" onClick={handlePerfil}>
             <img src="../public/imagenes/cuenta.png" alt="Log" />
