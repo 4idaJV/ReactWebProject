@@ -59,7 +59,7 @@ const Logear = () => {
             <input type="password" placeholder="xxxxxxxxxxxxxxxxxxxs" className='input_SignUp' value={password} onChange={(e) => setPassword(e.target.value)} />
                 <br/>
             <div className='agree'>
-                <input type="checkbox" className='check'/>
+                <input type="checkbox" className='check3'/>
                 <label className='label_checkbox'> By signing you are agree Terms & Conditions</label>
             </div>
 

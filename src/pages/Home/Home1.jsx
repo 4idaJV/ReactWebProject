@@ -20,7 +20,7 @@ const Home = () => {
       <section className='section1'>
         {<div className="video-container">
           <div className="text-overlay">
-            <p className='textoVideo'>Comienza la creación de tus propias recetas</p>
+            <p className='textoVideo'>Begin Your Menu-Making Adventure!</p>
           </div>
           <video autoPlay loop muted className="video">
             <source
@@ -32,7 +32,7 @@ const Home = () => {
       </section>
 
       <section className='section2'>
-        <h1 className="titulo1">How It Works</h1>
+        <h1 className="titulo1">Discover The Magic</h1>
 
         <div className="containerwork">
           <div className="caja">
@@ -40,31 +40,31 @@ const Home = () => {
               src="https://img.freepik.com/free-vector/eating-variety-foods-concept-illustration_114360-11295.jpg"
               alt=""
             />
-            <div className='caja-boton'>
+           {/* <div className='caja-boton'>
               <button className='circleButton'>
-                1
-              </button>
+            <p className='numero'>1</p>
+              </button>  */}
               <h1 className="subtitulo">Create Your Menu</h1>
-            </div>
-            <p>
-              Our dairy meal plans offer the variety and flexibility for you to
-              get the recipes that best fit your needs.
+            {/*  </div>  */}
+            <p className='parrafo'>
+            We craft exciting menus packed with a wide variety 
+            of recipes that perfectly fit your needs.
             </p>
           </div>
           <div className="caja">
             <img
-              src="https://img.freepik.com/free-vector/hand-drawn-business-planning_52683-76248.jpg?w=826&t=st=1714057625~exp=1714058225~hmac=04b5b57feb67803cb38026e51f71318d1ec00c105e88efd0ca916b0a685f8045"
+              src="https://img.freepik.com/vector-gratis/concepto-cocina-personas_23-2148532266.jpg?t=st=1714628786~exp=1714632386~hmac=6bddaf9f02870166c20d65a7a4e269dc92cb939084327c487e68a7628135b7f8&w=740"
               alt=""
             />
-            <div className='caja-boton'>
+            {/* <div className='caja-boton'>
               <button className='circleButton'>
                 2
-              </button>
-              <h1 className="subtitulo">Get Your Grocery</h1>
-            </div>
-            <p>
-              We provide you with a personalized shopping list that fits your
-              budget.
+              </button> */}
+              <h1 className="subtitulo">Cook</h1>
+            {/* </div> */}
+            <p className='parrafo' >
+            Our recipes are designed to be affordable and accessible 
+            to everyone, offering great value that fits your budget.
             </p>
           </div>
           <div className="caja">
@@ -72,12 +72,12 @@ const Home = () => {
               src="https://img.freepik.com/free-vector/hand-drawn-flat-design-people-eating-collection_23-2149194118.jpg?w=826&t=st=1714057571~exp=1714058171~hmac=476cf52e5052dcf2eb5b5c60c5bc0dbed9f197dc3371f0d32e918ff034250c6b"
               alt=""
             />
-            <div className='caja-boton'>
-              <button className='circleButton'>3</button>
+            {/* <div className='caja-boton'>
+              <button className='circleButton'>3</button> */}
               <h1 className="subtitulo">
-                Cook Quick & Easy</h1>
-            </div>
-            <p>
+                Savor</h1>
+           {/*  </div> */}
+            <p className='parrafo'>
               We tailor our recipes to fit your skills in cooking and your busy
               lifestyle, ensuring a satisfying and accessible culinary experience
               for everyone.
@@ -118,26 +118,14 @@ const Home = () => {
       </section>
 
       <section className="section5">
-        <h1 className='newRecipiesTitle'>RECENT RECIPIES</h1>
+        <h1 className='newRecipiesTitle'>UPCOMING RECIPES</h1>
         <div className="cajaRectangular">
           <div className='eachRecipeBox'>
             <div className='photoRecentRecipes1'>
             </div>
             <div className='gridtextButton'>
               <div className='textRecentRecipe'>
-                <p>Arroz Basmati Salteado con Heura y Verduras al Curry</p>
-              </div>
-              <div className='buttonPosition'>
-                <button className='addRecipe'>+</button>
-              </div>
-            </div>
-          </div>
-          <div className='eachRecipeBox'>
-          <div className='photoRecentRecipes1'>
-            </div>
-            <div className='gridtextButton'>
-              <div className='textRecentRecipe'>
-                <p>Arroz Basmati Salteado con Heura y Verduras al Curry</p>
+                <p>Zucchini Lasagna</p>
               </div>
               <div className='buttonPosition'>
                 <button className='addRecipe'>+</button>
@@ -149,7 +137,7 @@ const Home = () => {
             </div>
             <div className='gridtextButton'>
               <div className='textRecentRecipe'>
-                <p>Arroz Basmati Salteado con Heura y Verduras al Curry</p>
+                <p>Chickpea and Spinach Curry</p>
               </div>
               <div className='buttonPosition'>
                 <button className='addRecipe'>+</button>
@@ -161,7 +149,19 @@ const Home = () => {
             </div>
             <div className='gridtextButton'>
               <div className='textRecentRecipe'>
-                <p>Arroz Basmati Salteado con Heura y Verduras al Curry</p>
+                <p>Vegetarian Paella</p>
+              </div>
+              <div className='buttonPosition'>
+                <button className='addRecipe'>+</button>
+              </div>
+            </div>
+          </div>
+          <div className='eachRecipeBox'>
+          <div className='photoRecentRecipes4'>
+            </div>
+            <div className='gridtextButton'>
+              <div className='textRecentRecipe'>
+                <p>Stuffed Bell Peppers</p>
               </div>
               <div className='buttonPosition'>
                 <button className='addRecipe'>+</button>

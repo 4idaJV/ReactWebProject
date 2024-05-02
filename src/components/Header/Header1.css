@@ -25,11 +25,18 @@
 }
 
 .logo img {
- width: 100px;
+ width: 5.5vw;
  margin-left: 35px;
  margin-top: 7px;
 }
 /* Icono de perfil usuario */
+.login {
+    background-color: transparent;
+    border: none; 
+    display: flex;
+    margin-left: 20px;
+}
+
 .login {
     background-color: transparent;
     border: none; 
@@ -46,6 +53,7 @@
         
 }
 
+
 .login:hover {
     filter: drop-shadow(0px 4px 10px rgba(116, 27, 0, 0.3));  /* Cambio de sombra al pasar el ratón */ 
 }
@@ -54,17 +62,17 @@
     filter: drop-shadow(0px 4px 4px rgba(78, 19, 1, 0.3));  /* Cambio de sombra al hacer clic  */
 }
 
-.boton {
+.boton12 {
     background-color: #ef5f3b;
     border-radius: 50px;
     box-shadow: 0px 4px 4px #00000040;
     padding: 10px 30px; 
-    margin-right: 10px; 
+    margin-right: 5px; 
     text-decoration: none; 
     color: #ffffff; 
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold; 
-    font-size: 12px; 
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 900;
+    font-size: 1.1rem; 
     border: none; 
     white-space: nowrap;
     cursor: pointer;
@@ -84,9 +92,9 @@
     margin-left: 50px; 
     text-decoration: none; 
     color: #ffffff; 
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold; 
-    font-size: 15px;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
     list-style: none;
 }
 

@@ -117,7 +117,6 @@ input::placeholder{
     left: 0;
     line-height: normal;
     white-space: nowrap;
-    font-weight: 900;
     width: 100%;
     padding: 5px;
     color: #AEAEAE;
@@ -125,5 +124,6 @@ input::placeholder{
     border-bottom: 2px solid #00000037;
     font-size: 1rem;
     font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 900;
     
 }

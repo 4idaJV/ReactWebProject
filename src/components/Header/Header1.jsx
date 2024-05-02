@@ -56,7 +56,7 @@ const Header = () => {
       </section>
       <section id="sectionHeader2">
         
-        <button className="boton" onClick={handleClick}>
+        <button className="boton12" onClick={handleClick}>
           CREATE MENU
         </button>
         <div className="login">

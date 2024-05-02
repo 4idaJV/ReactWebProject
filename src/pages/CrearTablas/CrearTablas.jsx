@@ -217,9 +217,25 @@ function CrearTablas() {
               </label>
             </div>
           </section>
+<<<<<<< HEAD
           <h1 className="titulosCrearTablas">
             Do you have any allergies or food intolerances?
           </h1>
+=======
+          <h1 className='titulosCrearTablas'>Do you have any allergies or food intolerances?</h1>
+          <section className=''>
+            <div className='alergias'>
+              <div className='agree'>
+                c
+                <label className='label_checkbox'>
+                <span className="checkbox-custom"></span>
+                  Eggs</label>
+                
+              </div>
+              <div className='agree'>
+                <input type="checkbox" className='check' checked={alergenosMenu2} onChange={handleCheckbox5} />
+                <label className='label_checkbox'>Gluten</label>
+>>>>>>> a61fe127e8df17396369d2c9e08c73b42f09c4cb
 
 
           <section className="">

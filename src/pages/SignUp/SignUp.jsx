@@ -109,7 +109,7 @@ const SignForm = () => {
           <div className="agree">
             <input
               type="checkbox"
-              className="check"
+              className="check3"
               checked={isChecked}
               onChange={(event) => checkboxClicked(event)}
             />
