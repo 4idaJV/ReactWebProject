@@ -2,17 +2,43 @@
     display: grid;
     grid-template-columns: repeat(4,1fr);
     margin: 5% 4%;
-    row-gap: 20px;
+    row-gap: 35px;
 }
 
+.flexRecepieEncab{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 4.5vw;
+    margin-right: 5vw;
+    
+}
 
+.selectMeal{
+    border: none;
+    border-bottom: 2px solid #AEAEAE;
+    background-color: white;
+    height: 4vh;
+    width: 21vw;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 900;
+    color: rgb(84, 84, 84);
+    font-size: 1.5rem;
+
+
+}
 .titulo_recetas{
     text-align: center;
     margin-top: 30px;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 900;
+    color: rgb(84, 84, 84);
+    font-size: 3rem;
 }
 .label_Recetas{
     display: flex;
-    justify-content: center;
+    justify-content: end;
+    border:none;
     margin-top: 20px;
 }
 .recetas_Desayunos{
@@ -44,6 +70,7 @@
 }
 .crearmenu{
     margin-top: 9vh;
+    background-color: white;
     
 }
 

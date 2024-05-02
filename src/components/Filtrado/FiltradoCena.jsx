@@ -14,28 +14,28 @@ const FiltradoCena = ({recetas,regimenMenu,alergenosMenu,actu,setActu}) => {
         //Con esto filtramos los desayunos de todas las recetas
         if(alergenosMenu != "" && regimenMenu != ""){
             const desayunos = recetas.filter((breakfast)=> {
-            return breakfast.menuSetTime == "cena"
+            return breakfast.menuSetTime == "dinner"
                 }).filter((regimen)=>{
             return regimen.regimen == regimenMenu && regimen.alergenos != alergenosMenu
             })
             SetBreakf(desayunos)
         } else if(alergenosMenu != ""){
             const desayunos = recetas.filter((breakfast)=> {
-                return breakfast.menuSetTime == "cena"
+                return breakfast.menuSetTime == "dinner"
                     }).filter((regimen)=>{
                 return regimen.alergenos != alergenosMenu
                 })
                 SetBreakf(desayunos)
         } else if(regimenMenu != ""){
             const desayunos = recetas.filter((breakfast)=> {
-                return breakfast.menuSetTime == "cena"
+                return breakfast.menuSetTime == "dinner"
                     }).filter((regimen)=>{
                 return regimen.regimen == regimenMenu
                 })
                 SetBreakf(desayunos)
         } else {
             const desayunos = recetas.filter((breakfast)=> {
-                return breakfast.menuSetTime == "cena"
+                return breakfast.menuSetTime == "dinner"
                 })
                 SetBreakf(desayunos)
         } 

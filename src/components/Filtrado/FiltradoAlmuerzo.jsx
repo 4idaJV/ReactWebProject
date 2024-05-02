@@ -15,28 +15,28 @@ const FiltradoAlmuerzo = ({recetas,regimenMenu,alergenosMenu,actu,setActu}) => {
 
         if(alergenosMenu != "" && regimenMenu != ""){
             const desayunos = recetas.filter((breakfast)=> {
-            return breakfast.menuSetTime == "almuerzo"
+            return breakfast.menuSetTime == "lunch"
                 }).filter((regimen)=>{
             return regimen.regimen == regimenMenu && regimen.alergenos != alergenosMenu
             })
             SetBreakf(desayunos)
         } else if(alergenosMenu != ""){
             const desayunos = recetas.filter((breakfast)=> {
-                return breakfast.menuSetTime == "almuerzo"
+                return breakfast.menuSetTime == "lunch"
                     }).filter((regimen)=>{
                 return regimen.alergenos != alergenosMenu
                 })
                 SetBreakf(desayunos)
         } else if(regimenMenu != ""){
             const desayunos = recetas.filter((breakfast)=> {
-                return breakfast.menuSetTime == "almuerzo"
+                return breakfast.menuSetTime == "lunch"
                     }).filter((regimen)=>{
                 return regimen.regimen == regimenMenu
                 })
                 SetBreakf(desayunos)
         } else {
             const desayunos = recetas.filter((breakfast)=> {
-                return breakfast.menuSetTime == "almuerzo"
+                return breakfast.menuSetTime == "lunch"
                 })
                 SetBreakf(desayunos)
         }    

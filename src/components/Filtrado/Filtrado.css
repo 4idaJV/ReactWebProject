@@ -1,41 +1,62 @@
 .recetas{
-    width:230px;
-    height:280px;
+    width:500px;
+    height:470px;
     display: flex;
-    flex-direction:column ;
-    justify-content: center;
-    text-align: center;
-    background-color:rgba(235, 233, 232, 0.885) ;
+    flex-direction:column;
+    text-align:start;
+    background-color:white ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius:30px 30px 30px 30px;
-    padding-bottom: 30px;
 }
 .imagen_Recipe{
     display: flex;
-    margin: 0 auto;
-    width:230px;
-    height:200px;
-    border-radius: 20px;
+    margin: 0;
+    width:500px;
+    height:350px;
+    border-radius: 20px 20px 0px 0px;
     background-size: cover;
     padding-bottom: 1rem;
 }
+
+.PhotoBox{
+    
+
+    
+}
+
+.botonesPlaced{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+    margin-right: 25px;
+  
+}
+
 .fav{
-  width: 20%;
+  width: 10%;
   border-radius: 20px;
   background-color: rgb(238, 205, 39);
   cursor: pointer;
+  align-items: end;
 }
 .centrarRecetas{
     display: flex;
     justify-content:center ;
 }
 .recc{
-    width: 20%;
+    width: 10%;
     border-radius: 20px;
     background-color: rgb(231, 142, 19);
     cursor: pointer;
 }
 .tituloTargetas{
-    margin-top: 10px;
+    font-size: 1.5rem;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 900;
+    color: rgb(84, 84, 84);
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 

@@ -183,7 +183,7 @@ function CrearTablas() {
           <section className=''>
             <div className='alergias'>
               <div className='agree'>
-                <input type="checkbox" className='check' checked={alergenosMenu1} onChange={handleCheckbox4} hidden />
+                c
                 <label className='label_checkbox'>
                 <span className="checkbox-custom"></span>
                   Eggs</label>
