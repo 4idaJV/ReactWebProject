@@ -23,15 +23,18 @@ function Filtrado({ recetas, SetId, ids }) {
       <div className='recetas' key={recetas.id}>
         <div className='PhotoBox'>
           <img className='imagen_Recipe' src={recetas.img_url} alt="" />
-          <h4 className='tituloTargetas'>{recetas.title}</h4>
+          <div className='botonesPlaced'>
+            <div className='buttonPosition1'>
+              <button type='button' onClick={handleFav} className='fav'> + </button>
+            </div>
+            <div className='buttonPosition2'>
+              <Link className='nosub' to={`/PaginaReceta/${cool}`}><button type='button' className='recc'>View</button></Link>
+            </div>
+          </div>
         </div>
-        <div className='botonesPlaced'>
-          <div className='buttonPosition1'>
-            <button type='button' onClick={handleFav} className='fav'> + </button>
-          </div>
-          <div className='buttonPosition2'>
-            <Link className='nosub' to={`/PaginaReceta/${cool}`}><button type='button' className='recc'>View</button></Link>
-          </div>
+        <div>
+          <h4 className='tituloTargetas'>{recetas.title}</h4>
+          
         </div>
 
       </div>

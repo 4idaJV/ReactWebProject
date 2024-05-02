@@ -1,7 +1,7 @@
 .grid_recetas{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    margin: 5% 4%;
+    margin: 2% 4%;
     row-gap: 35px;
 }
 
@@ -29,7 +29,7 @@
 }
 .titulo_recetas{
     text-align: center;
-    margin-top: 30px;
+    margin-top: 60px;
     font-family: 'Montserrat-Bold', sans-serif;
     font-weight: 900;
     color: rgb(84, 84, 84);

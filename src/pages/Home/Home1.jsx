@@ -60,7 +60,7 @@ const Home = () => {
               <button className='circleButton'>
                 2
               </button> */}
-            <h1 className="subtitulo">Cook</h1>
+            <h1 className="subtitulo">Cook Affordably</h1>
             {/* </div> */}
             <p className='parrafo' >
               Our recipes are designed to be affordable and accessible
@@ -75,12 +75,10 @@ const Home = () => {
             {/* <div className='caja-boton'>
               <button className='circleButton'>3</button> */}
             <h1 className="subtitulo">
-              Savor</h1>
+              Savor Simplicity</h1>
             {/*  </div> */}
             <p className='parrafo'>
-              We tailor our recipes to fit your skills in cooking and your busy
-              lifestyle, ensuring a satisfying and accessible culinary experience
-              for everyone.
+            Our recipes match your cooking skills and busy lifestyle, ensuring an accessible and satisfying culinary experience.
             </p>
           </div>
         </div>
@@ -96,6 +94,7 @@ const Home = () => {
             <p className='spoonfullParagraph'>In just a few minutes, you'll find a carefully curated selection of delicious and healthy options that perfectly fit your lifestyle.</p>
           </div>
           <div className="sazzon-image">
+
           </div>
         </div>
       </section>
@@ -127,9 +126,9 @@ const Home = () => {
               <div className='textRecentRecipe'>
                 <p>Zucchini Lasagna</p>
               </div>
-              <div className='buttonPosition'>
+              {/* <div className='buttonPosition'>
                 <button className='addRecipe'>+</button>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className='eachRecipeBox'>
@@ -139,9 +138,9 @@ const Home = () => {
               <div className='textRecentRecipe'>
                 <p>Chickpea and Spinach Curry</p>
               </div>
-              <div className='buttonPosition'>
+              {/* <div className='buttonPosition'>
                 <button className='addRecipe'>+</button>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className='eachRecipeBox'>
@@ -151,9 +150,9 @@ const Home = () => {
               <div className='textRecentRecipe'>
                 <p>Vegetarian Paella</p>
               </div>
-              <div className='buttonPosition'>
+              {/* <div className='buttonPosition'>
                 <button className='addRecipe'>+</button>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className='eachRecipeBox'>
@@ -163,9 +162,9 @@ const Home = () => {
               <div className='textRecentRecipe'>
                 <p>Stuffed Bell Peppers</p>
               </div>
-              <div className='buttonPosition'>
+              {/* <div className='buttonPosition'>
                 <button className='addRecipe'>+</button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
