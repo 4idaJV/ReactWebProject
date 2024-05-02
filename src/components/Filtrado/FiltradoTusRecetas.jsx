@@ -17,7 +17,7 @@ function FiltradoTusRecetas({crearRecetas,receta}) {
                 <div className='recetasCreadas' key={receta.id}>
                       <img src={receta.img_url} className='imagen_recetas'  alt="" />
                       <p className='RecetaTitulo'>{receta.title}</p>
-                      <Link to={`/PaginaReceta2/${cool}`}><button type='button' className='recc'>SEE</button></Link>
+                      <Link to={`/PaginaReceta2/${cool}`}><button type='button' className='see'>SEE</button></Link>
                   </div>
           </>
         )

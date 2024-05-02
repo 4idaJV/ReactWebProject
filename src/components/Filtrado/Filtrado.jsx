@@ -27,10 +27,10 @@ function Filtrado({ recetas, SetId, ids }) {
         </div>
         <div className='botonesPlaced'>
           <div className='buttonPosition1'>
-            <button type='button' onClick={handleFav} className='fav'>+</button>
+            <button type='button' onClick={handleFav} className='fav'> + </button>
           </div>
           <div className='buttonPosition2'>
-            <Link to={`/PaginaReceta/${cool}`}><button type='button' className='recc'>SEE</button></Link>
+            <Link className='nosub' to={`/PaginaReceta/${cool}`}><button type='button' className='recc'>View</button></Link>
           </div>
         </div>
 

@@ -34,12 +34,6 @@
         margin-right: 15px;
 }
 
-.PhotoBox{
-    
-
-    
-}
-
 .botonesPlaced{
     display: flex;
     flex-direction: row;
@@ -50,21 +44,38 @@
 }
 
 .fav{
-  width: 20%;
-  border-radius: 20px;
-  background-color: rgb(238, 205, 39);
-  cursor: pointer;
-  align-items: end;
+    display: flex;
+    border-radius: 999px;
+    font-size: 20px;
+    padding: 5px 10px;
+    background-color: rgb(252, 201, 72);
+    margin-right: 15px;
+    border: none;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
 }
+
 .centrarRecetas{
     display: flex;
     justify-content:center ;
 }
 .recc{
-    width: 10%;
-    border-radius: 20px;
-    background-color: rgb(231, 142, 19);
-    cursor: pointer;
+    
+    display: flex;
+    border-radius: 999px;
+    font-size: 20px;
+    padding: 5px 10px;
+    background-color: rgba(234, 103, 38, 0.76);
+    border: none;
+    margin-right: 15px;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.nosub{
+    text-decoration: none;
 }
 .tituloTargetas{
     font-size: 1.5rem;
@@ -75,16 +86,19 @@
     margin-right: 25px;
 }
 
+.see{
+    background-color: rgb(230, 200, 46);
+    border-radius: 10px;
+}
 
 
 
 
-/*Esto No*/
-/* .imagen_recetas{
+ .imagen_recetas{
     display: flex;
     margin: 0 auto;
     width:180px;
-    height:180px;
+    height:160px;
     border-radius: 20px;
     background-size: cover;
     padding-bottom: 1rem;
@@ -94,4 +108,4 @@
     flex-direction: column;
     margin: 0 40%;
     gap:10px;
-} */
+} 

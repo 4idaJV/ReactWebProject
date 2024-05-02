@@ -131,17 +131,14 @@ const Perfil = () => {
             <span className='textousuario'>{nombreUser}</span></h1>
           </div>
 
-          {/* <div className='iconos' >
-            <p>iconos</p>
-          </div> */}
 
           <div className='MisPlatos'>
 
-            <div className='ContenedorRecetasUsuario'>
+            {/* <div className='ContenedorRecetasUsuario'>
               <h3 className='tituloCont'>My Saved Menus</h3>
-              {/* <FiltradoTusRecetas crearRecetas={crearRecetas}/> */}
+              {/* <FiltradoTusRecetas crearRecetas={crearRecetas}/> 
               <div className='borderyellow '></div>
-            </div> 
+            </div>  */}
 
             <div className='ContenedorRecetasUsuario'>
               <h3 className='tituloCont'>My Saved Recipes</h3>
@@ -157,11 +154,9 @@ const Perfil = () => {
                 
               <div className='borderyellow '></div>
             </div>
-
           </div>
 
       </div>
-
     </section>
   )
 }

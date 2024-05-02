@@ -6,7 +6,7 @@
 }
 
 .flexRecepieEncab{
-    display: flex;
+    display: flex;background-color: #ffffff;
     justify-content: space-between;
     align-items: center;
     margin-left: 4.5vw;
