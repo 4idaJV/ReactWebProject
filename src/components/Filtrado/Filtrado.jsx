@@ -11,8 +11,8 @@ function Filtrado({ recetas, SetId, ids }) {
   async function handleFav(e) {
     SetId(cool)
     let datos = {
-      userId: nume,
-      recipeId: ids
+      userId: parseInt(nume),
+      recipeId: cool
     }
     await VincularUR(datos)
   }
