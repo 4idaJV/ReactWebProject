@@ -95,7 +95,7 @@ const Perfil = () => {
         {/* Datos del usuario */}
         <div className='labelPerfil'>
             <div className='informacionPerfil'>
-              <h2 className='datosUsuario'>NAME</h2>
+              <h2 className='datosUsuario'>Full Name</h2>
               <p className='border'></p>
             </div>
 
