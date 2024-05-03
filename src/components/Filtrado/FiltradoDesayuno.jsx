@@ -70,7 +70,7 @@ const FiltradoDesayuno = ({ recetas, regimenMenu, alergenosMenu, actu, setActu }
                             <img className='imgSizeBoxes' src={breakf[numero].img_url} alt="" />
 
                             <div className="ajustarText">
-                                <p>{breakf[numero].title}</p>
+                                <p className="bigRecipeTitle">{breakf[numero].title}</p>
                                 <p><span className="negrita">Servings:</span> {breakf[numero].servingSize}</p>
                                 <br/>
                                 <p><span className="negrita">Instrucctions:</span> {breakf[numero].instructions}</p>

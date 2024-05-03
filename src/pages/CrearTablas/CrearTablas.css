@@ -128,25 +128,29 @@
 
 .box-Meals{
     display: grid;
+    justify-content: center;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: #F5F1F1;
-    margin-left: 60px;
-    margin-right: 60px;
-    gap: 40px ;
+    gap: 35px ;
 
-    justify-content:space-between;
+
+    
 }
 
 
 .individualBoxMeals{
     width:550px;
     height: 100%;
-    border: 2px solid black;
     margin-bottom: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
 }
 .imgSizeBoxes{
-    width: 545px;
+    width: 550px;
     height: 300px;
+    border-radius: 20px 20px 0px 0px;
+    margin-bottom: 10px;
 }
 
 .box-MealsBreakfast{
@@ -154,8 +158,20 @@
     Width:50px;
 }
 
+.boxTitle{
+    font-family: 'Montserrat-Bold', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 900;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    color: rgb(252, 201, 72);
+}
 
 
+.mainBox{
+    background-color: white;
+}
 
 
 

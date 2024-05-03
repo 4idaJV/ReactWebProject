@@ -106,14 +106,14 @@ const SignForm = () => {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
           <br />
-          <div className="agree">
+          <div className="agree1">
             <input
               type="checkbox"
-              className="check3"
+              className="check4"
               checked={isChecked}
               onChange={(event) => checkboxClicked(event)}
             />
-            <label className="label_checkbox">
+            <label className="label_checkbox2">
               {" "}
               By signing you are agree Terms & Conditions
             </label>

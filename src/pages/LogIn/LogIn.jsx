@@ -48,19 +48,19 @@ const Logear = () => {
 
         <form className='form_LogIn' onSubmit={handleLogIn}>
             <div className="button-container">
-                <button className="login-button">Login</button>
-                <button className="signin-button" onClick={handleSignUp}>Sign Up</button>
+                <button className="login-button1">Login</button>
+                <button className="signin-button1" onClick={handleSignUp}>Sign Up</button>
             </div>
 
-            <label className='labels_SignUp'>E-MAIL </label>
-            <input type="email" placeholder= "Enter you e-mail address" className='input_SignUp'  value={email} onChange={(e) => setEmail(e.target.value)} />
+            <label className='labels_SignUp1'>E-MAIL </label>
+            <input type="email" placeholder= "Enter you e-mail address" className='input_SignUp1'  value={email} onChange={(e) => setEmail(e.target.value)} />
                 <br/>
-            <label className='labels_SignUp'>PASSWORD</label>
-            <input type="password" placeholder="xxxxxxxxxxxxxxxxxxxs" className='input_SignUp' value={password} onChange={(e) => setPassword(e.target.value)} />
+            <label className='labels_SignUp1'>PASSWORD</label>
+            <input type="password" placeholder="xxxxxxxxxxxxxxxxxxxs" className='input_SignUp1' value={password} onChange={(e) => setPassword(e.target.value)} />
                 <br/>
-            <div className='agree'>
-                <input type="checkbox" className='check3'/>
-                <label className='label_checkbox'> By signing you are agree Terms & Conditions</label>
+            <div className='agree2'>
+                <input type="checkbox" className='check5'/>
+                <label className='label_checkbox3'> By signing you are agree Terms & Conditions</label>
             </div>
 
             <button type="submit" className='SignUp_Button'>

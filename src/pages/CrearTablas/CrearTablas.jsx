@@ -130,7 +130,10 @@ function CrearTablas() {
   function handleClick() {
     if (boolean == true) {
       return (
+        <div className="mainBox">
+          <p className="boxTitle">ENJOY YOUR MENU!</p>
         <div className="box-Meals">
+          
           <div className="box-MealsBreakfast">
             <FiltradoDesayuno
               recetas={recetas}
@@ -158,6 +161,7 @@ function CrearTablas() {
               setActu={setActu}
             />
           </div>
+        </div>
         </div>
       );
     } else if (boolean == false) {
